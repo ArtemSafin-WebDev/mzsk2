@@ -319,12 +319,10 @@
         grid-column: 1 / -1;
         padding: 0 3rem;
 
-        margin-bottom: 17rem;
+        
     }
 
-    @include breakpoint(mobile) {
-        margin-bottom: 5rem;
-    }
+   
 
     &:last-child {
         margin-bottom: 0;
@@ -701,7 +699,7 @@
     // opacity: 0;
     // visibility: hidden;
     clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
-
+    margin-top: 17rem;
     &.revealed {
         opacity: 1;
         visibility: inherit;
@@ -715,6 +713,10 @@
         grid-column: 1 / -1;
         padding-bottom: 16rem;
         align-items: flex-start;
+    }
+
+    @include breakpoint(mobile) {
+        margin-top: 5rem;
     }
 }
 

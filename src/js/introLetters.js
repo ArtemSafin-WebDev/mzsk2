@@ -14,7 +14,7 @@ export default function introLetters() {
         const letters = Array.from(element.querySelectorAll('.intro__letter'));
 
         ScrollTrigger.matchMedia({
-            '(min-width: 641)': () => {
+            '(min-width: 641px)': () => {
                 const tl = gsap.timeline({
                     scrollTrigger: {
                         trigger: element,
