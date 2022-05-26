@@ -1,0 +1,298 @@
+.catalog {
+    margin-bottom: 4rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 1.2rem;
+    }
+}
+
+.catalog__content {
+    border: 1px solid #dde2e9;
+    border-radius: 2rem;
+    overflow: hidden;
+}
+
+.catalog__top-row {
+    @include breakpointMF(small-tablet) {
+        display: grid;
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+        grid-gap: 2rem;
+        padding: 5.5rem 0;
+    }
+
+    @include breakpoint(mobile) {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        grid-template-areas: 'heading link' 'inner-heading inner-heading';
+        grid-gap: 3rem;
+        align-items: center;
+        padding: 2rem;
+        padding-bottom: 3rem;
+    }
+}
+
+.catalog__heading {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 110%;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+
+    @include breakpointMF(small-tablet) {
+        grid-column: span 2;
+        padding-left: 3rem;
+    }
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 110%;
+        grid-area: heading;
+        margin: 0;
+    }
+}
+
+.catalog__inner-heading {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3.6rem;
+    line-height: 120%;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+
+    @include breakpointMF(small-tablet) {
+        grid-column: span 7;
+        margin-top: -1rem;
+    }
+
+    @include breakpoint(mobile) {
+        grid-area: inner-heading;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 2rem;
+        line-height: 130%;
+    }
+}
+
+.catalog__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 110%;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #faf8f5;
+    background-color: var(--primary-color);
+    border-radius: 7rem;
+    padding: 1.4rem 2rem;
+    white-space: nowrap;
+
+    @include breakpointMF(small-tablet) {
+        align-self: flex-start;
+        justify-self: flex-end;
+        align-self: flex-start;
+        grid-column: span 3;
+        margin-right: 3rem;
+        margin-top: -1rem;
+    }
+
+    @include breakpoint(mobile) {
+        margin: 0;
+        grid-area: link;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 110%;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        padding: 1.2rem 1.6rem;
+    }
+    &:link,
+    &:visited {
+        color: #faf8f5;
+    }
+}
+
+.catalog__slider {
+    border-top: 1px solid #dde2e9;
+    display: flex;
+
+    @include breakpointMF(small-tablet) {
+        .swiper-slide {
+            display: flex;
+            flex-direction: column;
+            min-height: 68.5rem;
+            width: 30%;
+            border-right: 1px solid #dde2e9;
+            .product-card {
+                border-bottom: 1px solid #dde2e9;
+                &:last-child {
+                    border: none;
+                }
+            }
+
+            &:nth-child(3n + 1) {
+                width: 40%;
+            }
+
+            &:last-child {
+                border-right-color: transparent;
+            }
+        }
+    }
+
+    @include breakpoint(mobile) {
+        .swiper-wrapper {
+            display: grid;
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+
+        .swiper-slide {
+            display: contents;
+        }
+
+        .product-card {
+            border-bottom: 1px solid #DFE3E9;
+
+            
+        }
+
+        .catalog__slider-main:not(.all-shown) .product-card {
+            &:not(:nth-child(-n + 5)) {
+                display: none;
+            }
+        }
+    }
+}
+
+.catalog__slider-sidebar {
+    @include breakpointMF(small-tablet) {
+        padding: 3rem;
+        display: flex;
+        flex-direction: column;
+        width: 28rem;
+        flex-shrink: 0;
+        border-right: 1px solid #dde2e9;
+    }
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
+}
+
+.catalog__slider-main {
+    @include breakpointMF(small-tablet) {
+        width: 50%;
+        flex-grow: 1;
+        margin-right: -1px;
+    }
+
+    @include breakpoint(mobile) {
+        margin-bottom: -1px;
+    }
+}
+
+.catalog__slider-arrows {
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    @include breakpoint(mobile) {
+        display: none;
+    }
+}
+
+.catalog__slider-arrows-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    border: 1px solid #353535;
+    border-radius: 50%;
+    flex-shrink: 0;
+    transition: opacity .2s, background-color .2s, border-color .2s;
+    svg {
+        width: 2.4rem;
+        height: 2.4rem;
+        fill: #353535;
+        transition: fill .2s;
+    }
+
+    &.swiper-button-disabled {
+        opacity: 0.5;
+        cursor: default;
+    }
+
+    .no-touch &:not(.swiper-button-disabled):hover,
+    .touch &:not(.swiper-button-disabled):active {
+        background-color: var(--primary-color);
+        border-color: var(--primary-color);
+
+        svg {
+            fill: white;
+        }
+    }
+}
+
+.catalog__slider-link {
+    margin-top: auto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 110%;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 1.4rem 1rem;
+    border: 1px solid #353535;
+    border-radius: 7rem;
+    flex-shrink: 0;
+    align-items: stretch;
+    color: #353535;
+    white-space: nowrap;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    transition: background-color .2s, color .2s, border-color .2s;
+    &:link,
+    &:visited {
+        color: #353535;
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        background-color: var(--primary-color);
+        border-color: var(--primary-color);
+        color: white;
+    }
+}
+
+.catalog__show-all {
+    @include breakpointMF(small-tablet) {
+        display: none;
+    }
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 110%;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    // border-top: 1px solid #e2e7ed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1.8rem 3.6rem;
+
+    .all-shown & {
+        display: none;
+    }
+}

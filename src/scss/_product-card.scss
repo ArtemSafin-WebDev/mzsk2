@@ -1,0 +1,110 @@
+.product-card {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 2rem;
+    padding-bottom: 0;
+
+    @include breakpoint(mobile) {
+        padding: 2rem;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-gap: 2rem;
+        align-items: center;
+        grid-template-areas: 'image text';
+    }
+}
+
+.product-card__image-container {
+    @include breakpointMF(small-tablet) {
+        width: auto;
+        flex-grow: 1;
+        position: relative;
+
+        margin: 0 5rem;
+        margin-bottom: 3rem;
+        margin-top: 3rem;
+
+        &--no-bottom-margin {
+            margin-bottom: 0;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        width: 80%;
+        grid-area: image;
+        align-self: center;
+        justify-self: center;
+        position: relative;
+        &::before {
+            content: '';
+            display: block;
+            padding-bottom: 100%;
+        }
+
+        &--no-bottom-margin {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.product-card__image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center bottom;
+}
+
+.product-card__title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.8rem;
+    font-family: var(--inter);
+    line-height: 120%;
+    max-width: 28rem;
+
+    margin-bottom: 2rem;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 115%;
+        margin-bottom: 1.2rem;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.product-card__desc {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    font-family: var(--inter);
+    line-height: 115%;
+
+    color: #bfc3c7;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.2rem;
+        color: rgba(#353535, .4);
+        line-height: 115%;
+
+        br {
+            display: none;
+        }
+    }
+}
+
+.product-card__content {
+    // margin-top: 2.4rem;
+    // margin-bottom: auto;
+}
