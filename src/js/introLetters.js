@@ -13,20 +13,24 @@ export default function introLetters() {
         const cursorItems = Array.from(element.querySelectorAll('.intro__words-cursor-item'));
         const letters = Array.from(element.querySelectorAll('.intro__letter'));
 
-        const tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: element,
-                start: 'bottom bottom',
-                end: 'center center',
-                markers: false,
-                scrub: 1
-            }
-        });
+        ScrollTrigger.matchMedia({
+            '(min-width: 641)': () => {
+                const tl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: element,
+                        start: 'bottom bottom',
+                        end: 'center center',
+                        markers: false,
+                        scrub: 1
+                    }
+                });
 
-        tl.to(wrapper, {
-            x: () => element.offsetWidth - wrapper.offsetWidth,
-            // x: () => -500,
-            duration: 0.5
+                tl.to(wrapper, {
+                    x: () => element.offsetWidth - wrapper.offsetWidth,
+                    // x: () => -500,
+                    duration: 0.5
+                });
+            }
         });
 
         console.log(element.offsetWidth - wrapper.offsetWidth);
