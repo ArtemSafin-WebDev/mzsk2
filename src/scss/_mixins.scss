@@ -134,6 +134,19 @@
     }
 }
 
+@mixin fadeReveal {
+    transform: translateZ(0) translateY(5rem);
+    opacity: 0;
+    visibility: hidden;
+
+    .revealed & {
+        opacity: 1;
+        visibility: inherit;
+        transition: opacity 0.4s, visibility 0.4s, transform 0.4s;
+        transform: translateZ(0) translateY(0rem);
+    }
+}
+
 @mixin breakpoint($class) {
     @if $class == large-desktop {
         @media only screen and (max-width: (1600px)) {

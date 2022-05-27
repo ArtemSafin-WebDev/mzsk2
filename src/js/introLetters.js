@@ -17,9 +17,10 @@ export default function introLetters() {
             '(min-width: 641px)': () => {
                 const tl = gsap.timeline({
                     scrollTrigger: {
-                        trigger: element,
-                        start: 'bottom bottom',
-                        end: 'center center',
+                        trigger: '.intro',
+                        start: 'top top',
+                        endTrigger: element,
+                        end: 'bottom top',
                         markers: false,
                         scrub: 1
                     }

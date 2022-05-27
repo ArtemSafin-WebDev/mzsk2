@@ -12,6 +12,8 @@
     overflow: hidden;
     color: #faf8f5;
 
+    @include fadeReveal;
+
     @include breakpoint(mobile) {
       
 
@@ -131,6 +133,12 @@
     &:link,
     &:visited {
         color: var(--primary-color);
+    }
+
+    transition: opacity .2s;
+    .no-touch &:hover,
+    .touch &:active {
+        opacity: 0.85;
     }
 }
 
@@ -578,6 +586,18 @@
     color: var(--primary-color);
     align-self: flex-start;
 
+   
+
+    &:link,
+    &:visited {
+        color: var(--primary-color);
+    }
+    transition: opacity .2s;
+    .no-touch &:hover,
+    .touch &:active {
+        opacity: 0.85;
+    }
+
     @include breakpoint(mobile) {
         align-self: stretch;
         padding: 2rem 4rem;
@@ -590,8 +610,5 @@
         align-self: stretch;
         margin-top: auto;
     }
-    &:link,
-    &:visited {
-        color: var(--primary-color);
-    }
+    
 }

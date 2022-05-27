@@ -10,6 +10,9 @@
     border: 1px solid #dfe3e9;
     border-radius: 2rem;
 
+
+    @include fadeReveal;
+
     @include breakpoint(mobile) {
         overflow: hidden;
     }
@@ -162,6 +165,12 @@
 
         &:last-child {
             border: none;
+        }
+
+        .no-touch &:hover {
+            .clients__reviews-company-logo {
+                opacity: 1;
+            }
         }
 
         &.active {

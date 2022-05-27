@@ -10,7 +10,7 @@ export default function revealBlocks() {
         console.log(element);
         ScrollTrigger.create({
             trigger: element,
-            start: 'top bottom-=5%',
+            start: 'top bottom-=10%',
             scrub: false,
             end: 'bottom top',
             markers: false,

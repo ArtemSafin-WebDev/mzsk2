@@ -5,6 +5,13 @@
     padding: 2rem;
     padding-bottom: 0;
 
+    .no-touch &:hover,
+    .touch &:active {
+        .product-card__title {
+            color: var(--primary-color);
+        }
+    }
+
     @include breakpoint(mobile) {
         padding: 2rem;
         display: grid;
@@ -66,7 +73,7 @@
     font-family: var(--inter);
     line-height: 120%;
     max-width: 28rem;
-
+    transition: color .2s;
     margin-bottom: 2rem;
 
     @include breakpoint(mobile) {

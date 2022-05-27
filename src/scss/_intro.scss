@@ -333,7 +333,8 @@
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     background: #ffffff;
-
+    backface-visibility: hidden;
+    transform: translateZ(0);
     border-radius: 1.6rem;
     overflow: hidden;
 
@@ -699,7 +700,8 @@
     // opacity: 0;
     // visibility: hidden;
     clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
-    margin-top: 17rem;
+    margin-top: 15rem;
+    padding-top: 2rem;
     &.revealed {
         opacity: 1;
         visibility: inherit;
@@ -716,7 +718,7 @@
     }
 
     @include breakpoint(mobile) {
-        margin-top: 5rem;
+        margin-top: 3rem;
     }
 }
 
