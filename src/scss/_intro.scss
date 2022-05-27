@@ -919,8 +919,9 @@
     text-transform: uppercase;
     text-align: center;
     padding: 1.8rem 3.6rem;
-    // border-top: 1px solid #E2E7ED;
+    border-top: 1px solid #E2E7ED;
     color: #353535;
+    margin-top: -1px;
 
     @include breakpointMF(small-tablet) {
         display: none;
