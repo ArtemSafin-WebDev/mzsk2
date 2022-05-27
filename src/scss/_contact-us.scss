@@ -61,6 +61,8 @@
 .contacts-us__image-wrapper {
     @include breakpointMF(small-tablet) {
         grid-column: span 5;
+        display: flex;
+        flex-direction: column;
     }
 }
 
@@ -68,7 +70,11 @@
     display: block;
     width: 100%;
     height: auto;
+   
 
+    @include breakpointMF(small-tablet) {
+        flex-grow: 1;
+    }
     @include breakpoint(mobile) {
         max-height: 25.4rem;
         object-fit: cover;
@@ -124,7 +130,7 @@
     line-height: 120%;
     letter-spacing: 0.01em;
     text-transform: uppercase;
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
     margin-top: -0.8rem;
 
     @include breakpoint(mobile) {

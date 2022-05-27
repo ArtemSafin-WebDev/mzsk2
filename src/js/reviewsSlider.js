@@ -11,8 +11,10 @@ export default function reviewsSlider() {
         const links = Array.from(element.querySelectorAll('.clients__reviews-company'));
         const bullets = Array.from(element.querySelectorAll('.clients__reviews-slider-bullet'));
         const setActiveLink = index => {
-            links.forEach(link => link.classList.remove('active'));
-            links[index].classList.add('active');
+            if (links.length) {
+                links.forEach(link => link.classList.remove('active'));
+                links[index].classList.add('active');
+            }     
             bullets.forEach(bullet => bullet.classList.remove('active'));
             bullets[index].classList.add('active');
         };
@@ -22,7 +24,7 @@ export default function reviewsSlider() {
             fadeEffect: {
                 crossFade: true
             },
-            autoHeight: true,
+            autoHeight: IS_MOBILE ? true : false,
             speed: 500,
             navigation: {
                 nextEl: element.querySelector('.clients__reviews-slider-arrow--next'),
