@@ -25,11 +25,11 @@ html {
     -webkit-text-size-adjust: 100%;
 
     @include noHighlight();
+    font-size: clamp(4.2px, 0.6vw, 25px);
 
-
-    @media screen and (max-width: 1679px) {
-        font-size: clamp(4.2px, 0.6vw, 25px);
-    }
+    // @media screen and (max-width: 1679px) {
+    //     font-size: clamp(4.2px, 0.6vw, 25px);
+    // }
 
     @include breakpoint(mobile) {
         font-size: 10px;
