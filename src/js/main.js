@@ -18,6 +18,7 @@ import introLetters from './introLetters';
 import imagesLoaded from 'imagesloaded';
 import SplitText from './gsap/SplitText';
 import revealBlocks from './revealBlocks';
+import productsSidebar from './productsSidebar';
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -40,6 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
     showAll();
     introLetters();
     revealBlocks();
+    productsSidebar();
 
     const pageContent = document.querySelector('.page-content');
     if (pageContent) {

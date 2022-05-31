@@ -7,16 +7,20 @@
     z-index: 80;
 
 
-    opacity: 0;
-    visibility: hidden;
-    // transform: translateY(4rem);
-    .animatable & {
-        opacity: 1;
-        visibility: inherit;
-        transition: opacity .6s ease 1.2s, visibility .6s ease 1.2s, transform .6s ease 1.2s;
-        transform: translateY(0);
-       
+
+    &:not(.page-header--no-animation) {
+        opacity: 0;
+        visibility: hidden;
+        // transform: translateY(4rem);
+        .animatable & {
+            opacity: 1;
+            visibility: inherit;
+            transition: opacity .6s ease 1.2s, visibility .6s ease 1.2s, transform .6s ease 1.2s;
+            transform: translateY(0);
+           
+        }
     }
+  
 }
 
 .page-header__content {
