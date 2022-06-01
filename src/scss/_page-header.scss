@@ -5,6 +5,7 @@
     width: 100%;
     height: auto;
     z-index: 80;
+    pointer-events: none;
 
 
 
@@ -49,6 +50,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    pointer-events: all;
 
     @include breakpoint(mobile) {
         width: 4rem;
@@ -98,7 +100,7 @@
     text-transform: uppercase;
     display: block;
     color: #faf8f5;
-
+    pointer-events: all;
     text-decoration: underline;
     text-decoration-color: transparent;
     transition: all 0.2s;
@@ -129,6 +131,7 @@
     margin-right: 1.2rem;
     flex-shrink: 0;
     white-space: nowrap;
+    pointer-events: all;
 
     @include breakpoint(mobile) {
         margin-right: 0.7rem;

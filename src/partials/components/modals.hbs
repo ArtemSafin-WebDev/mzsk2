@@ -1,0 +1,34 @@
+<div class="modal js-modal" id="order-product">
+    <div class="modal__inner">
+        <button class="modal__close js-close-modal">
+            <svg width="14" height="14" aria-hidden="true" class="icon-close">
+                <use xlink:href="#close"></use>
+            </svg>
+        </button>
+        <h3 class="modal__heading">
+            оформите заказ сейчас и мы свяжемся с вами в самое ближайшее время
+        </h3>
+        <form action="/" method="POST" class="modal__form" data-need-validation="">
+            <div class="modal__form-fields">
+                <div class="modal__form-field">
+                    <input type="text" class="modal__form-input" placeholder="Имя" required="">
+                </div>
+                <div class="modal__form-field">
+                    <input type="tel" class="modal__form-input js-phone-input" placeholder="Телефон" required=""
+                        data-parsley-phone="">
+                </div>
+                <div class="modal__form-field">
+                    <input type="text" class="modal__form-input" placeholder="Комментарий (необязательно)" required="">
+                </div>
+            </div>
+            <div class="modal__form-controls">
+                <button type="submit" class="modal__form-submit">
+                    Отправить
+                </button>
+                <div class="modal__form-policy">
+                    Нажимая “Отправить” вы соглашаетесь <a href="#">с политикой конфиденциальности</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

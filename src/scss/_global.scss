@@ -11,8 +11,8 @@
     --content-padding: 2rem;
     --primary-color: #2274E0;
     --text-color: #353535;
-    --helios: 'Helios', sans-serif;
-    --inter: 'Inter', sans-serif;
+    --helios: 'Helios', 'Montserrat', sans-serif;
+    --inter: 'Inter', 'Montserrat', sans-serif;
 
     @include breakpoint(mobile) {
         --content-padding: .6rem;
