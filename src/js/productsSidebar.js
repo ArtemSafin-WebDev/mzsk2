@@ -11,6 +11,8 @@ export default function productsSidebar() {
             const scrollWrapper = document.querySelector('.products__main-scroll-wrapper');
             const mainInner = document.querySelector('.products__main-inner');
 
+            if (!products || !scrollWrapper || !mainInner) return;
+
             const tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: products,
