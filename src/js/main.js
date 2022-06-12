@@ -19,6 +19,7 @@ import imagesLoaded from 'imagesloaded';
 import SplitText from './gsap/SplitText';
 import revealBlocks from './revealBlocks';
 import productsSidebar from './productsSidebar';
+import customSelects from './customSelects';
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -32,6 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
     validation();
     anchorLinks();
     accordions();
+    customSelects();
     modals();
     tabs();
     menu();
@@ -42,6 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
     introLetters();
     revealBlocks();
     productsSidebar();
+
 
     const pageContent = document.querySelector('.page-content');
     if (pageContent) {

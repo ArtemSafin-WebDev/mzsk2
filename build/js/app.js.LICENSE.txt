@@ -71,4 +71,6 @@
 * MIT Licensed
 */
 
+/*! choices.js v10.1.0 | © 2022 Josh Johnson | https://github.com/jshjohnson/Choices#readme */
+
 /*! lazysizes - v5.2.2 */
