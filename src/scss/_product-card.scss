@@ -64,6 +64,10 @@
     height: 100%;
     object-fit: contain;
     object-position: center bottom;
+
+    @include breakpoint(mobile) {
+        object-position: center;
+    }
 }
 
 .product-card__title {

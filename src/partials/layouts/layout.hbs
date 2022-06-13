@@ -23,13 +23,17 @@
     </div>
 
     <div class="page-content">
+        {{> menu }}
         {{> header }}
-        <main class="page-main">
-            {{#block "main"}}
+        <div class="page-inner-content">
+            <main class="page-main">
+                {{#block "main"}}
 
-            {{/block}}
-        </main>
-        {{> footer }}
+                {{/block}}
+            </main>
+
+            {{> footer }}
+        </div>
         {{> modals }}
 
         {{> ie-placeholder }}

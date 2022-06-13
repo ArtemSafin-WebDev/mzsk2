@@ -57,7 +57,7 @@
     .animatable & {
         opacity: 1;
         visibility: inherit;
-        transition: opacity .3s, visibility .3s, clip-path .5s;
+        transition: opacity 0.3s, visibility 0.3s, clip-path 0.5s;
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
 
@@ -109,8 +109,7 @@
     .animatable & {
         opacity: 1;
         visibility: inherit;
-        transition: opacity .3s ease .4s, visibility .3s ease .4s;
-       
+        transition: opacity 0.3s ease 0.4s, visibility 0.3s ease 0.4s;
     }
 
     @include breakpoint(mobile) {
@@ -135,7 +134,7 @@
     z-index: 10;
     opacity: 0;
     visibility: hidden;
-   
+
     &:not(:first-child) {
         margin-left: -2rem;
 
@@ -174,8 +173,6 @@
     display: flex;
     align-items: center;
 
-
-   
     @include breakpointMF(small-tablet) {
         grid-column: 1 / -1;
     }
@@ -198,9 +195,8 @@
     .animatable & {
         opacity: 1;
         visibility: inherit;
-        transition: opacity .8s ease 1s, visibility .8s ease 1s, transform .8s ease 1s;
+        transition: opacity 0.8s ease 1s, visibility 0.8s ease 1s, transform 0.8s ease 1s;
         transform: translateY(0);
-       
     }
     @include breakpoint(mobile) {
         height: 50rem;
@@ -225,16 +221,17 @@
     flex-shrink: 0;
     cursor: none;
 
-
     opacity: 0;
     visibility: hidden;
-   
+
+    .mobile-menu-open & {
+        cursor: default;
+    }
+
     .animatable & {
         opacity: 1;
         visibility: inherit;
-        transition: opacity .6s ease 1s, visibility .6s ease 1s, transform .6s ease 1s;
-       
-       
+        transition: opacity 0.6s ease 1s, visibility 0.6s ease 1s, transform 0.6s ease 1s;
     }
     .no-touch &:hover {
         .intro__letter-image {
@@ -306,23 +303,17 @@
 
     opacity: 0;
     visibility: hidden;
-   
+
     .animatable & {
         opacity: 1;
         visibility: inherit;
-        transition: opacity .6s ease 1s, visibility .6s ease 1s, transform .6s ease 1s;
-       
-       
+        transition: opacity 0.6s ease 1s, visibility 0.6s ease 1s, transform 0.6s ease 1s;
     }
 
     @include breakpointMF(small-tablet) {
         grid-column: 1 / -1;
         padding: 0 3rem;
-
-        
     }
-
-   
 
     &:last-child {
         margin-bottom: 0;
@@ -530,7 +521,7 @@
         transform-origin: center bottom;
         transform: scaleY(0);
         background-color: #e2e7ed;
-        transition: transform .4s;
+        transition: transform 0.4s;
     }
     svg {
         flex-shrink: 0;
@@ -549,7 +540,7 @@
     .touch &:not(.swiper-button-disabled):active {
         &::before {
             transform: scaleY(1);
-            transition: transform .4s ease-out;
+            transition: transform 0.4s ease-out;
         }
     }
 }
@@ -702,10 +693,12 @@
     clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
     margin-top: 15rem;
     padding-top: 2rem;
+    position: relative;
+    z-index: 50;
     &.revealed {
         opacity: 1;
         visibility: inherit;
-        transition: opacity .4s, visibility .4s, clip-path 1s;
+        transition: opacity 0.4s, visibility 0.4s, clip-path 1s;
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
     @include breakpointMF(small-tablet) {
@@ -921,7 +914,7 @@
     text-transform: uppercase;
     text-align: center;
     padding: 1.8rem 3.6rem;
-    border-top: 1px solid #E2E7ED;
+    border-top: 1px solid #e2e7ed;
     color: #353535;
     margin-top: -1px;
 
@@ -969,7 +962,11 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-   
+
+    .mobile-menu-open & {
+        display: none;
+    }
+
     &:link,
     &:visited {
         color: #353535;
@@ -987,7 +984,6 @@
 }
 
 .intro__words-cursor-item {
-
     display: none;
     &.active {
         display: inline-flex;

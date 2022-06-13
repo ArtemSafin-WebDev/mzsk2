@@ -13,9 +13,11 @@
     --text-color: #353535;
     --helios: 'Helios', 'Montserrat', sans-serif;
     --inter: 'Inter', 'Montserrat', sans-serif;
+    --menu-width: 55rem;
 
     @include breakpoint(mobile) {
         --content-padding: .6rem;
+        --menu-width: 31rem;
     }
 }
 
@@ -25,7 +27,7 @@ html {
     -webkit-text-size-adjust: 100%;
 
     @include noHighlight();
-    font-size: clamp(4.2px, 0.6vw, 25px);
+    font-size: clamp(2px, 0.6vw, 125px);
 
     // @media screen and (max-width: 1679px) {
     //     font-size: clamp(4.2px, 0.6vw, 25px);
