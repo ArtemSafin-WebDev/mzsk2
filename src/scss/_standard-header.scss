@@ -26,6 +26,35 @@
     }
 }
 
+.standard-header__bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        opacity: var(--overlay-opacity, 0);
+    }
+}
+
+.standard-header__bg-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .standard-header__logo {
     display: flex;
     align-items: flex-start;
@@ -80,7 +109,7 @@
     font-style: normal;
     font-weight: 400;
     font-size: 1rem;
-    line-height: 110%;
+    line-height: 150%;
     letter-spacing: 0.13em;
     text-transform: uppercase;
     color: rgba(white, 0.5);
@@ -96,15 +125,18 @@
     }
 
     a {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.8rem;
+       
 
         svg {
             flex-shrink: 0;
             width: 0.4rem;
             height: 1.2rem;
             fill: rgba(white, 0.5);
+            margin-left: 0.5rem;
+            display: inline-block;
+            vertical-align: top;
+            position: relative;
+            top: .1rem;
         }
 
         &:last-child {
