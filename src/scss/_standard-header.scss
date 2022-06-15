@@ -9,14 +9,23 @@
     border-radius: 2rem;
     overflow: hidden;
     color: #faf8f5;
-  
+
     padding-top: 2.5rem;
     padding-bottom: 4rem;
+
+    .standard-header--large & {
+        min-height: 90rem;
+
+        @include breakpoint(mobile) {
+            min-height: auto;
+        }
+    }
 
     @include breakpointMF(small-tablet) {
         display: grid;
         grid-template-columns: repeat(12, minmax(0, 1fr));
         grid-gap: 2rem;
+        align-content: flex-start;
     }
 
     @include breakpoint(mobile) {
@@ -125,8 +134,6 @@
     }
 
     a {
-       
-
         svg {
             flex-shrink: 0;
             width: 0.4rem;
@@ -136,7 +143,7 @@
             display: inline-block;
             vertical-align: top;
             position: relative;
-            top: .1rem;
+            top: 0.1rem;
         }
 
         &:last-child {
@@ -175,6 +182,76 @@
         line-height: 120%;
         letter-spacing: 0.01em;
         text-transform: uppercase;
-        
+        margin-bottom: 1.5rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.standard-header__text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 120%;
+    letter-spacing: 0.01em;
+    color: #f0f3f7;
+    font-family: var(--inter);
+    grid-column: 3 / 7;
+    margin-bottom: 2rem;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 110%;
+        letter-spacing: 0.01em;
+        margin-bottom: 2rem;
+    }
+}
+
+.standard-header__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3rem 6.4rem;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 110%;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #faf8f5;
+    border: 1px solid #faf8f5;
+    border-radius: 7rem;
+    flex-shrink: 0;
+    grid-column: 3 / -1;
+    justify-self: flex-start;
+    align-self: flex-start;
+    transition: background-color 0.2s, color 0.2s;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 110%;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        padding: 1.2rem 1.6rem;
+        border-radius: 7rem;
+        grid-area: link;
+        justify-self: flex-start;
+       
+    }
+    &:link,
+    &:visited {
+        color: #faf8f5;
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        color: var(--primary-color);
+        background-color: #faf8f5;
     }
 }

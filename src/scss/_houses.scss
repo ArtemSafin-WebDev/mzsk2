@@ -1,0 +1,68 @@
+.houses {
+    padding-top: 6rem;
+    margin-bottom: 9rem;
+
+    @include breakpoint(mobile) {
+        padding-top: 0;
+        margin-bottom: 2rem;
+    }
+}
+
+.houses__intro {
+    margin-bottom: 9rem;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    @include breakpointMF(small-tablet) {
+        display: grid;
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+        grid-gap: 2rem;
+        align-content: flex-start;
+    }
+
+    @include breakpoint(mobile) {
+        padding: 2rem;
+        border-radius: 2rem;
+        border: 1px solid #dfe3e9;
+        margin-bottom: 2rem;
+        
+    }
+}
+
+.houses__intro-heading {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.2rem;
+    line-height: 120%;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    grid-column: 3 / 9;
+    margin-bottom: 1rem;
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 2rem;
+        line-height: 130%;
+        margin: 0;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.houses__intro-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 120%;
+    letter-spacing: 0.01em;
+    grid-column: 3 / 9;
+    font-family: var(--inter);
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 120%;
+        margin-bottom: 0;
+    }
+}
+

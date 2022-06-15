@@ -12,13 +12,22 @@
     overflow: hidden;
     color: #faf8f5;
 
+    .solutions--light & {
+        background: transparent;
+        color: var(--text-color);
+        border: 1px solid #dfe3e9;
+    }
+
     @include fadeReveal;
 
     @include breakpoint(mobile) {
-      
-
-        background: linear-gradient(180deg, #1F73E0 -5.16%, rgba(63, 111, 217, 0) 360.97%);
+        background: linear-gradient(180deg, #1f73e0 -5.16%, rgba(63, 111, 217, 0) 360.97%);
         border-radius: 2rem;
+
+        .solutions--light & {
+            background: transparent;
+            color: var(--text-color);
+        }
     }
 }
 
@@ -118,6 +127,19 @@
     align-self: flex-start;
     background-color: #fff;
 
+    &:link,
+    &:visited {
+        color: var(--primary-color);
+    }
+
+    .solutions--light & {
+        background-color: var(--primary-color);
+        color: white;
+        &:link,
+        &:visited {
+            color: white;
+        }
+    }
     @include breakpoint(mobile) {
         font-style: normal;
         font-weight: 400;
@@ -130,12 +152,8 @@
         flex-shrink: 0;
         white-space: nowrap;
     }
-    &:link,
-    &:visited {
-        color: var(--primary-color);
-    }
 
-    transition: opacity .2s;
+    transition: opacity 0.2s;
     .no-touch &:hover,
     .touch &:active {
         opacity: 0.85;
@@ -147,7 +165,7 @@
 
     @include breakpoint(mobile) {
         margin: 0 -2rem;
-        
+
         grid-column: 1 / -1;
     }
 }
@@ -160,6 +178,10 @@
     border-bottom: 1px solid rgba(#faf8f5, 0.2);
     padding: 2.4rem 0;
 
+    .solutions--light & {
+        border-color: #dfe3e9;
+    }
+
     @include breakpoint(mobile) {
         grid-template-columns: minmax(0, auto) minmax(0, 1fr);
         grid-template-rows: auto auto;
@@ -171,7 +193,10 @@
         grid-row-gap: 0;
         border-top: 1px solid rgba(#faf8f5, 0.2);
         border-bottom: none;
-        
+
+        .solutions--light & {
+            border-color: #dfe3e9;
+        }
     }
 
     @include breakpointMF(small-tablet) {
@@ -198,7 +223,6 @@
         text-transform: uppercase;
         grid-area: title;
         margin-bottom: 0.3rem;
-       
     }
 }
 
@@ -234,6 +258,11 @@
 
 .solutions__projects {
     border: 1px solid rgba(#faf8f5, 0.2);
+    margin: -1px;
+
+    .solutions--light & {
+        border-color: #dfe3e9;
+    }
 }
 
 .solutions__projects-card {
@@ -281,6 +310,10 @@
         display: grid;
         border-left: 1px solid rgba(#faf8f5, 0.2);
         grid-template-rows: auto auto auto 1fr;
+
+        .solutions--light & {
+            border-color: #dfe3e9;
+        }
     }
 
     @include breakpoint(mobile) {
@@ -396,7 +429,7 @@
 
 .solutions__projects-card-price-block {
     @include breakpointMF(small-tablet) {
-        grid-column: 3 / -1;
+        grid-column: 1 / -1;
         display: flex;
         align-items: center;
         gap: 3rem;
@@ -410,11 +443,10 @@
 }
 
 .solutions__projects-card-price {
-
     @include breakpoint(mobile) {
         grid-area: price;
     }
-} 
+}
 
 .solutions__projects-card-price-title {
     font-style: normal;
@@ -466,7 +498,33 @@
     border: 1px solid #faf8f5;
     border-radius: 7rem;
     flex-shrink: 0;
-    transition: background-color 0.2s, color 0.2s;
+    transition: background-color 0.2s, color 0.2s, opacity .2s;
+
+    &:link,
+    &:visited {
+        color: #faf8f5;
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        background-color: #faf8f5;
+        color: var(--primary-color);
+    }
+
+    .solutions--light & {
+        border-color: var(--primary-color);
+        background-color: var(--primary-color);
+
+      
+    }
+
+    .no-touch .solutions--light &:hover,
+    .touch .solutions--light &:active {
+        border-color: var(--primary-color);
+        background-color: var(--primary-color);
+        opacity: 0.85;
+        color: white;
+    }
 
     @include breakpoint(mobile) {
         font-style: normal;
@@ -481,20 +539,14 @@
         justify-self: flex-start;
         margin-top: 1rem;
     }
-    &:link,
-    &:visited {
-        color: #faf8f5;
-    }
-
-    .no-touch &:hover,
-    .touch &:active {
-        background-color: #faf8f5;
-        color: var(--primary-color);
-    }
 }
 
 .solutions__projects-list-item {
     border-bottom: 1px solid rgba(#faf8f5, 0.2);
+
+    .solutions--light & {
+        border-color: #dfe3e9;
+    }
     &:last-child {
         border: none;
     }
@@ -522,7 +574,7 @@
     @include breakpoint(mobile) {
         min-height: 35.6rem;
         padding: 2rem;
-        background: url('../img/solution-contact-mobile-bg.webp'), linear-gradient(180deg, #1F73E0 -5.16%, rgba(63, 111, 217, 0) 464.29%);
+        background: url('../img/solution-contact-mobile-bg.webp'), linear-gradient(180deg, #1f73e0 -5.16%, rgba(63, 111, 217, 0) 464.29%);
         background-size: cover;
     }
 }
@@ -586,13 +638,11 @@
     color: var(--primary-color);
     align-self: flex-start;
 
-   
-
     &:link,
     &:visited {
         color: var(--primary-color);
     }
-    transition: opacity .2s;
+    transition: opacity 0.2s;
     .no-touch &:hover,
     .touch &:active {
         opacity: 0.85;
@@ -610,5 +660,4 @@
         align-self: stretch;
         margin-top: auto;
     }
-    
 }

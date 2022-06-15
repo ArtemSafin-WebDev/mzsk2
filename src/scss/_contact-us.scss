@@ -26,7 +26,7 @@
     }
 
     @include breakpoint(mobile) {
-        background-image: url('../img/contact-us-mobile-bg.webp'), linear-gradient(180deg, #1F73E0 -5.16%, rgba(63, 111, 217, 0) 360.97%);
+        background-image: url('../img/contact-us-mobile-bg.webp'), linear-gradient(180deg, #1f73e0 -5.16%, rgba(63, 111, 217, 0) 360.97%);
         background-size: 10rem auto, cover;
         background-position: right top;
         background-repeat: no-repeat;
@@ -70,7 +70,6 @@
     display: block;
     width: 100%;
     height: auto;
-   
 
     @include breakpointMF(small-tablet) {
         flex-grow: 1;
@@ -109,6 +108,7 @@
 .contact-us__form {
     display: flex;
     flex-direction: column;
+    align-self: stretch;
 
     .parsley-errors-list.filled {
         font-size: 1.2rem;
@@ -209,7 +209,7 @@
     text-transform: uppercase;
     color: var(--primary-color);
     flex-shrink: 0;
-    transition: opacity .2s;
+    transition: opacity 0.2s;
 
     .no-touch &:hover,
     .touch &:active {
@@ -249,9 +249,113 @@
         color: white;
         text-decoration: underline;
         text-decoration-color: transparent;
-        transition: all .2s;
+        transition: all 0.2s;
         .no-touch &:hover {
             text-decoration-color: white;
+        }
+    }
+}
+
+.contacts-us__rules-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 2rem;
+    max-width: 54rem;
+    grid-row-gap: 3.2rem;
+    margin-bottom: 4rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 3rem;
+        grid-gap: 2rem;
+    }
+}
+
+.contacts-us__card-key {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 115%;
+    color: rgba(white, 0.5);
+    margin-bottom: 0.8rem;
+    font-family: var(--inter);
+}
+
+.contacts-us__card-value {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.2rem;
+    line-height: 120%;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1.8rem;
+        line-height: 130%;
+    }
+}
+
+.contacts-us__links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.6rem;
+    margin-top: auto;
+
+    @include breakpoint(mobile) {
+        align-items: stretch;
+        gap: 1rem;
+    }
+}
+
+.contacts-us__link {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 110%;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #faf8f5;
+    border: 1px solid #faf8f5;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+    padding: 1.4rem 2rem;
+    border-radius: 7rem;
+    text-align: center;
+    justify-content: center;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 110%;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        padding: 1.2rem 1.6rem;
+        border-radius: 7rem;
+        width: 100%;
+       
+    }
+    &:link,
+    &:visited {
+        color: #faf8f5;
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        background-color: #faf8f5;
+        color: var(--primary-color);
+    }
+
+    &--filled {
+        background-color: #faf8f5;
+        color: var(--primary-color);
+
+        &:link,
+        &:visited {
+            color: var(--primary-color);
         }
     }
 }
