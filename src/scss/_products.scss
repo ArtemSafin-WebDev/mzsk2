@@ -8,6 +8,8 @@
     border-radius: 2rem;
     color: white;
 
+  
+
     @include breakpointMF(small-tablet) {
         display: grid;
         grid-template-columns: repeat(12, minmax(0, 1fr));

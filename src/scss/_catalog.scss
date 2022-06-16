@@ -10,12 +10,7 @@
     border: 1px solid #dde2e9;
     border-radius: 2rem;
     overflow: hidden;
-
-    .js-block-to-reveal & {
-        @include fadeReveal;
-    }
-
-   
+    @include fadeReveal;
 }
 
 .catalog__top-row {

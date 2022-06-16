@@ -6,6 +6,8 @@
     border: 1px solid #dfe3e9;
     border-radius: 2rem;
     overflow: hidden;
+
+    @include fadeReveal;
 }
 
 .realised-projects__list {

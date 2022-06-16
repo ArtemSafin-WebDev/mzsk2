@@ -18,9 +18,7 @@
         border: 1px solid #dfe3e9;
     }
 
-    .js-block-to-reveal & {
-        @include fadeReveal;
-    }
+    @include fadeReveal;
 
     
 

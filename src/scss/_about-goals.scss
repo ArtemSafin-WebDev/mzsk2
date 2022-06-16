@@ -11,7 +11,7 @@
     background: linear-gradient(180deg, #1f73e0 -5.16%, #ffffff 464.29%);
     border-radius: 2rem;
     color: #f0f3f7;
-
+    @include fadeReveal;
     @include breakpointMF(small-tablet) {
         display: grid;
         grid-template-columns: repeat(12, minmax(0, 1fr));

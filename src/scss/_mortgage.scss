@@ -9,6 +9,8 @@
 
 .mortgage__intro {
     margin-bottom: 10rem;
+
+    @include fadeReveal;
     @include breakpointMF(small-tablet) {
         display: grid;
         grid-template-columns: repeat(12, minmax(0, 1fr));

@@ -13,6 +13,7 @@
     overflow: hidden;
     background-color: var(--primary-color);
     color: #f0f3f7;
+    @include fadeReveal;
     @include breakpointMF(small-tablet) {
         display: grid;
         grid-template-columns: repeat(12, minmax(0, 1fr));

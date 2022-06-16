@@ -9,9 +9,7 @@
 .contact-us__row {
     color: white;
 
-    .js-block-to-reveal & {
-        @include fadeReveal;
-    }
+    @include fadeReveal;
 
     @include breakpointMF(small-tablet) {
         background: linear-gradient(180deg, #1f73e0 -5.16%, #ffffff 464.29%);

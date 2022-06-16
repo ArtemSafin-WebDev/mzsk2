@@ -6,6 +6,7 @@
     background: #f0f3f7;
     border-radius: 2rem;
     overflow: hidden;
+    @include fadeReveal;
 }
 
 .projects-slider__top {
