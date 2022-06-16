@@ -21,6 +21,7 @@ import revealBlocks from './revealBlocks';
 import productsSidebar from './productsSidebar';
 import customSelects from './customSelects';
 import projectsSlider from './projectsSlider';
+import houseSlider from './houseSlider';
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -46,6 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
     revealBlocks();
     productsSidebar();
     projectsSlider();
+    houseSlider();
 
 
     const pageContent = document.querySelector('.page-content');

@@ -18,7 +18,11 @@
         border: 1px solid #dfe3e9;
     }
 
-    @include fadeReveal;
+    .js-block-to-reveal & {
+        @include fadeReveal;
+    }
+
+    
 
     @include breakpoint(mobile) {
         background: linear-gradient(180deg, #1f73e0 -5.16%, rgba(63, 111, 217, 0) 360.97%);

@@ -9,7 +9,11 @@
 .contact-us__row {
     color: white;
 
-    @include fadeReveal;
+    .js-block-to-reveal & {
+        @include fadeReveal;
+    }
+
+  
 
     @include breakpointMF(small-tablet) {
         background: linear-gradient(180deg, #1f73e0 -5.16%, #ffffff 464.29%);
@@ -37,7 +41,7 @@
         backface-visibility: hidden;
         transform: translateZ(0);
 
-        @include fadeReveal;
+        
     }
 }
 

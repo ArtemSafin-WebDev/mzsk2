@@ -1,0 +1,493 @@
+.house {
+    margin-bottom: 17rem;
+    padding-top: 6rem;
+
+    @include breakpoint(mobile) {
+        padding-top: 0;
+        margin-bottom: 4rem;
+    }
+}
+
+.house__content {
+    @include breakpointMF(small-tablet) {
+        display: grid;
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+        grid-gap: 2rem;
+        align-content: flex-start;
+        align-items: flex-start;
+        grid-row-gap: 10rem;
+    }
+
+    @include breakpoint(mobile) {
+        padding: 2rem;
+        border-radius: 2rem;
+        overflow: hidden;
+        border: 1px solid #dfe3e9;
+    }
+}
+
+.house__small-heading {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 110%;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    grid-column: 1 / 3;
+    padding-left: 3rem;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 110%;
+        margin-bottom: 2.2rem;
+        padding: 0;
+        grid-column: 1 / -1;
+        padding-left: 0;
+    }
+}
+
+.house__desc {
+    grid-column: 3 / 8;
+    @include breakpoint(mobile) {
+        margin-bottom: 4rem;
+    }
+}
+
+.house__intro-desc-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.8rem;
+    line-height: 110%;
+    font-family: var(--inter);
+    margin-bottom: 4.5rem;
+    margin-top: -0.5rem;
+
+    @include breakpoint(mobile) {
+        margin: 0;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.house__advantages {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 3.6rem;
+    row-gap: 1.8rem;
+
+    @include breakpoint(mobile) {
+        gap: 2rem;
+        row-gap: 1rem;
+    }
+}
+
+.house__advantages-card {
+    flex-shrink: 0;
+}
+
+.house__advantages-card-key {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 115%;
+    font-family: var(--inter);
+    margin-bottom: 1rem;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.2rem;
+        line-height: 110%;
+        margin-bottom: 0.8rem;
+    }
+}
+
+.house__advantages-card-value {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0.8rem 1.4rem;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.6rem;
+    background: #f0f3f7;
+    border-radius: 2.4rem;
+    line-height: 120%;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        padding: 0.7rem 1.4rem;
+        border-radius: 2rem;
+    }
+}
+
+.house__order {
+    grid-column: 9 / -1;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 4rem;
+    }
+}
+
+.house__price {
+    margin-bottom: 3.6rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 1.5rem;
+    }
+}
+
+.house__price-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 115%;
+    font-family: var(--inter);
+    margin-top: -0.3rem;
+    margin-bottom: 0.2rem;
+}
+
+.house__price-amount {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3.6rem;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    line-height: 120%;
+
+    @include breakpoint(mobile) {
+        font-size: 3rem;
+        line-height: 1.2;
+    }
+}
+
+.house__btns {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+
+    @include breakpoint(mobile) {
+        gap: 0.8rem;
+    }
+}
+
+.house__btn {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 110%;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border: 1px solid var(--primary-color);
+    border-radius: 7rem;
+    padding: 2rem 4rem;
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s, opacity 0.2s;
+    color: var(--primary-color);
+    white-space: nowrap;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 110%;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        padding: 1.2rem 1.6rem;
+        border-radius: 7rem;
+    }
+    &:link,
+    &:visited {
+        color: var(--primary-color);
+    }
+
+    &:hover {
+        background-color: var(--primary-color);
+        color: white;
+    }
+
+    &--filled {
+        background-color: var(--primary-color);
+        color: white;
+
+        &:link,
+        &:visited {
+            color: white;
+        }
+
+        &:hover {
+            opacity: 0.85;
+        }
+    }
+}
+
+.house__specs {
+    grid-column: 3 / 7;
+}
+
+.house__slider {
+    grid-column: 9 / -1;
+    grid-row: 2 / 3;
+    padding-top: 1.5rem;
+
+    @include breakpoint(mobile) {
+        padding: 0;
+        margin-bottom: 3rem;
+    }
+
+    // width: 50rem;
+}
+
+.house__slider-main-card {
+    position: relative;
+    border-radius: 2rem;
+    overflow: hidden;
+    box-sizing: border-box;
+
+    @include breakpoint(mobile) {
+        border-radius: 1.5rem;
+    }
+    &::before {
+        content: '';
+        display: block;
+        padding-bottom: 56.25%;
+    }
+}
+
+.house__slider-main {
+    max-width: 50rem;
+    position: relative;
+
+    @include breakpoint(mobile) {
+        max-width: none;
+    }
+    .swiper {
+        overflow: visible;
+    }
+
+    .swiper-slide {
+        padding-right: 1.2rem;
+        width: 100%;
+        box-sizing: content-box;
+
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+}
+
+.house__slider-arrows {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    position: absolute;
+    z-index: 20;
+    right: 2.4rem;
+    bottom: 2rem;
+}
+
+.house__slider-arrow {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: opacity 0.2s, background-color 0.2s, border-color 0.2s;
+    svg {
+        width: 2rem;
+        height: 2rem;
+        fill: var(--text-color);
+        transition: fill 0.2s;
+    }
+
+    &.swiper-button-disabled {
+        opacity: 0.8;
+        cursor: default;
+    }
+
+    .no-touch &:not(.swiper-button-disabled):hover,
+    .touch &:not(.swiper-button-disabled):active {
+        background-color: var(--primary-color);
+        border-color: var(--primary-color);
+
+        svg {
+            fill: white;
+        }
+    }
+}
+
+.house__slider-main-card-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.house__slider-text {
+    margin-top: 3.5rem;
+    max-width: 50rem;
+    padding-right: 1.2rem;
+
+    @include breakpoint(mobile) {
+        margin-top: 2rem;
+    }
+}
+
+.house__slider-text-card {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 140%;
+    font-family: var(--inter);
+}
+
+.house__specs-list {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-gap: 3.2rem;
+
+    @include breakpoint(mobile) {
+        grid-gap: 2.4rem;
+    }
+}
+
+.house__specs-list-item {
+    @include breakpointMF(small-tablet) {
+        .house__specs:not(.all-shown) & {
+            &:not(:nth-child(-n + 4)) {
+                display: none;
+            }
+        }
+    }
+
+    @include breakpoint(mobile) {
+        .house__specs:not(.all-shown) & {
+            &:not(:nth-child(-n + 2)) {
+                display: none;
+            }
+        }
+    }
+}
+
+.house__specs-block-heading {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 120%;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    padding: 2rem 0;
+
+    @include breakpoint(mobile) {
+        padding: 0;
+        margin-bottom: 1.6rem;
+        font-size: 1.4rem;
+    }
+}
+
+.house__specs-block-list-item {
+    border-top: 1px solid #dfe3e9;
+    &:last-child {
+        border-bottom: 1px solid #dfe3e9;
+    }
+}
+
+.house__specs-block-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    min-height: 5.6rem;
+    padding: 1.6rem 0;
+
+    @include breakpoint(mobile) {
+        min-height: 4.8rem;
+        padding: 1.2rem 0;
+    }
+}
+
+.house__specs-block-card-title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 115%;
+    font-family: var(--inter);
+}
+
+.house__specs-block-card-value {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 115%;
+    font-family: var(--inter);
+    text-align: right;
+    flex-shrink: 0;
+    white-space: nowrap;
+    svg {
+        width: 2rem;
+        height: 2rem;
+        fill: currentColor;
+    }
+}
+
+.house__specs-show-more {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1.1rem 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 110%;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border: 1px solid #353535;
+    border-radius: 7rem;
+    color: #353535;
+    transition: border-color 0.2s, color 0.2s, background-color 0.2s;
+    margin-top: 4.4rem;
+    flex-shrink: 0;
+
+    @include breakpoint(mobile) {
+        margin-top: 3rem;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 110%;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        padding: 1.2rem 1.6rem;
+        border-radius: 7rem;
+    }
+    &:link,
+    &:visited {
+        color: #353535;
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        color: white;
+        background-color: #353535;
+    }
+    .all-shown & {
+        display: none;
+    }
+}
