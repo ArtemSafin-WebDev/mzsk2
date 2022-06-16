@@ -1,0 +1,112 @@
+.about-geography {
+    margin-bottom: 4rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 2rem;
+    }
+}
+
+.about-geography__content {
+    position: relative;
+    z-index: 1;
+    border-radius: 2rem;
+    overflow: hidden;
+    background-color: var(--primary-color);
+    color: #f0f3f7;
+    @include breakpointMF(small-tablet) {
+        display: grid;
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+        grid-gap: 2rem;
+
+        padding-top: 12rem;
+        grid-template-rows: auto auto 1fr;
+        min-height: min(calc(100vh - 4rem), 90rem);
+        padding-bottom: 20rem;
+    }
+
+    @include breakpoint(mobile) {
+        padding: 2rem;
+        min-height: 48rem;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.about-geography__map {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.about-geography__map-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    @include breakpoint(mobile) {
+        object-position: 90% 50%;
+    }
+}
+
+.about-geography__small-heading {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 110%;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    grid-column: 3 / -1;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 110%;
+        margin-bottom: 2.8rem
+    }
+}
+
+.about-geography__large-heading {
+    grid-column: 3 / 9;
+    font-style: normal;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3.6rem;
+    line-height: 120%;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 2rem;
+        line-height: 130%;
+        margin-bottom: 2rem;
+    }
+}
+
+.about-geography__text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 120%;
+    letter-spacing: 0.01em;
+    font-family: var(--inter);
+    grid-column: 3 / 6;
+    align-self: flex-end;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 110%;
+        letter-spacing: 0.01em;
+        margin-top: auto;
+    }
+}

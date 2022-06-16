@@ -15,10 +15,6 @@
 
     .standard-header--large & {
         min-height: min(calc(100vh - 4rem), 90rem);
-
-        @include breakpoint(mobile) {
-            min-height: auto;
-        }
     }
 
     @include breakpointMF(small-tablet) {
@@ -30,12 +26,24 @@
         &--stretched {
             align-content: stretch;
         }
+
+       
     }
 
     @include breakpoint(mobile) {
         padding: 2rem;
         padding-top: 10.5rem;
         padding-bottom: 3rem;
+
+        &--mobile-height {
+            min-height: 25rem !important;
+        }
+
+        .standard-header--large & {
+            min-height: auto;
+        }
+
+        
     }
 }
 
@@ -95,6 +103,13 @@
     @include breakpoint(mobile) {
         margin-bottom: 2.8rem;
         gap: 1.8rem;
+    }
+}
+
+.standard-header__logo--hide-on-mobile {
+    @include breakpoint(mobile) {
+        opacity: 0 !important;
+        visibility: hidden !important;
     }
 }
 

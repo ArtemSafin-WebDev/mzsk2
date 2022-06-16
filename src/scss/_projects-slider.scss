@@ -197,21 +197,38 @@
 }
 
 .projects-slider__wrapper {
- 
+    overflow: hidden;
 
     @include breakpointMF(small-tablet) {
         grid-column: 3 / -1;
         border-left: 1px solid #dfe3e9;
     }
+
+    .swiper {
+        margin-right: -1px;
+        margin-left: -1px;
+    }
     .swiper-slide {
         width: 55rem;
         border-right: 1px solid #dfe3e9;
+
+        
 
         @include breakpoint(mobile) {
             width: 85%;
         }
         &:last-child {
             border-right-color: transparent;
+        }
+    }
+
+    .projects-slider--news & {
+        .swiper-slide {
+            width: 33.33%;
+
+            @include breakpoint(mobile) {
+                width: 85%;
+            }
         }
     }
 }

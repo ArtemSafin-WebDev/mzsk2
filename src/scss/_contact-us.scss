@@ -13,8 +13,6 @@
         @include fadeReveal;
     }
 
-  
-
     @include breakpointMF(small-tablet) {
         background: linear-gradient(180deg, #1f73e0 -5.16%, #ffffff 464.29%);
         border-radius: 2rem;
@@ -40,8 +38,6 @@
         overflow: hidden;
         backface-visibility: hidden;
         transform: translateZ(0);
-
-        
     }
 }
 
@@ -340,7 +336,6 @@
         padding: 1.2rem 1.6rem;
         border-radius: 7rem;
         width: 100%;
-       
     }
     &:link,
     &:visited {
@@ -361,5 +356,81 @@
         &:visited {
             color: var(--primary-color);
         }
+    }
+}
+
+.contacts-us__vacancies-list {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.contacts-us__vacancies-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.contacts-us__vacancies-card-title {
+    display: flex;
+    align-items: center;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 120%;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    gap: 2rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        gap: 1.5rem;
+    }
+
+    svg {
+        flex-shrink: 0;
+        width: 4.6rem;
+        height: 4.6rem;
+        fill: currentColor;
+
+        @include breakpoint(mobile) {
+            width: 3.8rem;
+            height: 3.8rem;
+        }
+    }
+}
+
+.contacts-us__vacancies-card-list {
+    padding-left: 6.6rem;
+    margin-top: 0.5rem;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-gap: 0.2rem;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 115%;
+    font-family: var(--inter);
+
+    @include breakpoint(mobile) {
+        padding-left: 5rem;
+    }
+}
+
+.contacts-us__vacancies-card-list-item {
+    display: flex;
+    align-items: flex-start;
+    
+
+    &::before {
+        content: '';
+        flex-shrink: 0;
+        width: 0.4rem;
+        height: 0.4rem;
+        background-color: currentColor;
+        border-radius: 50%;
+        margin-top: .7rem;
+        margin-right: 0.7rem;
+        margin-left: 0.4rem;
     }
 }
