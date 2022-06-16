@@ -22,6 +22,7 @@ import productsSidebar from './productsSidebar';
 import customSelects from './customSelects';
 import projectsSlider from './projectsSlider';
 import houseSlider from './houseSlider';
+import historySlider from './historySlider';
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -48,6 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
     productsSidebar();
     projectsSlider();
     houseSlider();
+    historySlider();
 
 
     const pageContent = document.querySelector('.page-content');
