@@ -1,17 +1,26 @@
 .standard-header {
     margin-bottom: 2rem;
+
+   
+}
+
+.standard-header__clipper {
+    border-radius: 2rem;
+    overflow: hidden;
+    backface-visibility: hidden;
 }
 
 .standard-header__content {
     position: relative;
     z-index: 1;
     background: linear-gradient(180deg, #1f73e0 -5.16%, #ffffff 464.29%);
-    border-radius: 2rem;
-    overflow: hidden;
+   
     color: #faf8f5;
-
+  
     padding-top: 2.5rem;
     padding-bottom: 4rem;
+
+ 
 
     .standard-header--large & {
         min-height: min(calc(100vh - 4rem), 90rem);
@@ -83,6 +92,11 @@
     object-fit: cover;
 }
 
+.standard-header__logo-wrapper {
+    align-self: flex-start;
+    grid-column: 3 / span 3;
+}
+
 .standard-header__logo {
     display: flex;
     align-items: flex-start;
@@ -90,9 +104,9 @@
     margin-bottom: 5rem;
     opacity: 0;
     visibility: hidden;
-    align-self: flex-start;
+   
     clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
-    grid-column: 3 / span 3;
+    
     .animatable & {
         opacity: 1;
         visibility: inherit;

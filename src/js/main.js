@@ -24,6 +24,7 @@ import projectsSlider from './projectsSlider';
 import houseSlider from './houseSlider';
 import historySlider from './historySlider';
 import solutionsCards from './solutionsCards';
+import shrinkHeadersOnScroll from './shrinkHeadersOnScroll';
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -52,6 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
     houseSlider();
     historySlider();
     solutionsCards();
+    shrinkHeadersOnScroll();
 
 
     const pageContent = document.querySelector('.page-content');

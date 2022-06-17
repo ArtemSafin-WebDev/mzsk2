@@ -21,7 +21,8 @@ export default function productsSidebar() {
                     end: () => mainInner.offsetHeight - scrollWrapper.offsetHeight,
                     pin: '.products__content',
                     pinSpacing: true,
-                    scrub: true
+                    scrub: true,
+                    pinType: 'transform'
                 }
             });
 

@@ -263,33 +263,37 @@
 
 <section class="standard-header">
     <div class="container">
-        <div class="standard-header__content">
-            <a href="#" class="standard-header__logo">
-                <img src="img/logo.svg" alt="" class="standard-header__logo-image">
-                <div class="standard-header__logo-text">
-                    МАРИЙСКИЙ ЗАВОД<br>
-                    СИЛИКАТНОГО<br>
-                    КИРПИЧА
+        <div class="standard-header__clipper">
+            <div class="standard-header__content">
+                <div class="standard-header__logo-wrapper">
+                    <a href="#" class="standard-header__logo">
+                        <img src="img/logo.svg" alt="" class="standard-header__logo-image">
+                        <div class="standard-header__logo-text">
+                            МАРИЙСКИЙ ЗАВОД<br>
+                            СИЛИКАТНОГО<br>
+                            КИРПИЧА
+                        </div>
+                    </a>
                 </div>
-            </a>
-            <div class="standard-header__breadcrumbs">
-                <a href="#">
-                    Главная
-                    <svg width="14" height="14" aria-hidden="true" class="icon-breadcrumbs-arrow">
-                        <use xlink:href="#breadcrumbs-arrow"></use>
-                    </svg>
-                </a>
-                <a href="#" class="active">
+                <div class="standard-header__breadcrumbs">
+                    <a href="#">
+                        Главная
+                        <svg width="14" height="14" aria-hidden="true" class="icon-breadcrumbs-arrow">
+                            <use xlink:href="#breadcrumbs-arrow"></use>
+                        </svg>
+                    </a>
+                    <a href="#" class="active">
+                        Реализованные проекты
+                        <svg width="14" height="14" aria-hidden="true" class="icon-breadcrumbs-arrow">
+                            <use xlink:href="#breadcrumbs-arrow"></use>
+                        </svg>
+                    </a>
+                </div>
+                <h1 class="standard-header__main-heading">
                     Реализованные проекты
-                    <svg width="14" height="14" aria-hidden="true" class="icon-breadcrumbs-arrow">
-                        <use xlink:href="#breadcrumbs-arrow"></use>
-                    </svg>
-                </a>
-            </div>
-            <h1 class="standard-header__main-heading">
-                Реализованные проекты
-            </h1>
+                </h1>
 
+            </div>
         </div>
     </div>
 </section>
@@ -741,7 +745,6 @@
 </section>
 
             </main>
-
             <footer class="page-footer">
                 <div class="container">
                     <div class="page-footer__content">
@@ -868,75 +871,75 @@
                     </div>
                 </div>
             </footer>        </div>
-        <div class="modal js-modal" id="order-product">
-            <div class="modal__inner">
-                <button class="modal__close js-close-modal">
-                    <svg width="14" height="14" aria-hidden="true" class="icon-close">
-                        <use xlink:href="#close"></use>
-                    </svg>
-                </button>
-                <h3 class="modal__heading">
-                    оформите заказ сейчас и мы свяжемся с вами в самое ближайшее время
-                </h3>
-                <form action="/" method="POST" class="modal__form" data-need-validation="">
-                    <div class="modal__form-fields">
-                        <div class="modal__form-field">
-                            <input type="text" class="modal__form-input" placeholder="Имя" required="">
-                        </div>
-                        <div class="modal__form-field">
-                            <input type="tel" class="modal__form-input js-phone-input" placeholder="Телефон" required=""
-                                data-parsley-phone="">
-                        </div>
-                        <div class="modal__form-field">
-                            <input type="text" class="modal__form-input" placeholder="Комментарий (необязательно)" required="">
-                        </div>
-                    </div>
-                    <div class="modal__form-controls">
-                        <button type="submit" class="modal__form-submit">
-                            Отправить
-                        </button>
-                        <div class="modal__form-policy">
-                            Нажимая “Отправить” вы соглашаетесь <a href="#">с&nbsp;политикой конфиденциальности</a>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <style>
-            .ie-placeholder {
-                z-index: 4000;
-                position: fixed;
-                left: 0;
-                top: 0;
-                width: 100%;
-                height: 100%;
-                background-color: #202020;
-                color: white;
-                display: flex;
-                flex-direction: column;
-                text-align: center;
-                
-            }
-            .ie-placeholder__message {
-                font-size: 2rem;
-                line-height: 1.2;
-                font-weight: 500;
-                margin: auto;
-            }
-            @supports (display: grid) {
-                .ie-placeholder {
-                    display: none;
-                }
-            }
-        </style>
-        <div class="ie-placeholder">
-            <div class="ie-placeholder__message">
-                Извините, ваш браузер не поддерживается
-            </div>
-        </div>        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="js/app.js"></script>
-        <script src="assets/js/backend.js"></script>
     </div>
+
+    <div class="modal js-modal" id="order-product">
+        <div class="modal__inner">
+            <button class="modal__close js-close-modal">
+                <svg width="14" height="14" aria-hidden="true" class="icon-close">
+                    <use xlink:href="#close"></use>
+                </svg>
+            </button>
+            <h3 class="modal__heading">
+                оформите заказ сейчас и мы свяжемся с вами в самое ближайшее время
+            </h3>
+            <form action="/" method="POST" class="modal__form" data-need-validation="">
+                <div class="modal__form-fields">
+                    <div class="modal__form-field">
+                        <input type="text" class="modal__form-input" placeholder="Имя" required="">
+                    </div>
+                    <div class="modal__form-field">
+                        <input type="tel" class="modal__form-input js-phone-input" placeholder="Телефон" required=""
+                            data-parsley-phone="">
+                    </div>
+                    <div class="modal__form-field">
+                        <input type="text" class="modal__form-input" placeholder="Комментарий (необязательно)" required="">
+                    </div>
+                </div>
+                <div class="modal__form-controls">
+                    <button type="submit" class="modal__form-submit">
+                        Отправить
+                    </button>
+                    <div class="modal__form-policy">
+                        Нажимая “Отправить” вы соглашаетесь <a href="#">с&nbsp;политикой конфиденциальности</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>    <style>
+        .ie-placeholder {
+            z-index: 4000;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #202020;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            
+        }
+        .ie-placeholder__message {
+            font-size: 2rem;
+            line-height: 1.2;
+            font-weight: 500;
+            margin: auto;
+        }
+        @supports (display: grid) {
+            .ie-placeholder {
+                display: none;
+            }
+        }
+    </style>
+    <div class="ie-placeholder">
+        <div class="ie-placeholder__message">
+            Извините, ваш браузер не поддерживается
+        </div>
+    </div>    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="assets/js/backend.js"></script>
 </body>
 
 </html>
