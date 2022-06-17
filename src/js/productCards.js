@@ -14,6 +14,7 @@ export default function productCards() {
 
         const priceTabs = Array.from(element.querySelectorAll('.products__card-price-tabs-item'));
         const specsTabs = Array.from(element.querySelectorAll('.products__card-specs-tabs-item'));
+        const calcTabs = Array.from(element.querySelectorAll('.products__card-calculation-card-tab-item'));
 
         typeBtns.forEach((btn, btnIndex) => {
             btn.addEventListener('click', event => {
@@ -40,9 +41,13 @@ export default function productCards() {
                 packageBtns.forEach(btn => btn.classList.remove('active'));
                 priceTabs.forEach(item => item.classList.remove('active'));
                 specsTabs.forEach(item => item.classList.remove('active'));
-                priceTabs[btnIndex].classList.add('active');
+                calcTabs.forEach(item => item.classList.remove('active'));
+
+                
+                priceTabs[btnIndex]?.classList.add('active');
                 packageBtns[btnIndex].classList.add('active');
                 specsTabs[btnIndex].classList.add('active');
+                calcTabs[btnIndex].classList.add('active');
 
                 ScrollTrigger.refresh(true);
 
