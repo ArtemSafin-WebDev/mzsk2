@@ -87,6 +87,7 @@
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-gap: 2rem;
+    grid-row-gap: 3rem;
 
     @include breakpoint(mobile) {
         grid-template-columns: minmax(0, 1fr);
@@ -316,6 +317,12 @@
         @include breakpoint(mobile) {
             max-height: 22rem;
         }
+    }
+}
+
+.calculator__form-field--extra-padding {
+    @include breakpointMF(small-tablet) {
+        padding-top: 1rem;
     }
 }
 

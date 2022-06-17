@@ -23,6 +23,7 @@ import customSelects from './customSelects';
 import projectsSlider from './projectsSlider';
 import houseSlider from './houseSlider';
 import historySlider from './historySlider';
+import solutionsCards from './solutionsCards';
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -50,6 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
     projectsSlider();
     houseSlider();
     historySlider();
+    solutionsCards();
 
 
     const pageContent = document.querySelector('.page-content');
@@ -95,7 +97,10 @@ const introAnimation = () => {
                     stagger: 0.2
                 },
                 '<'
-            );
+            ).to('.intro__order-btn', {
+                autoAlpha: 1,
+                duration: 0.4
+            },  '<')
     }
 };
 

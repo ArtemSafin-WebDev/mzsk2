@@ -205,6 +205,10 @@
         .solutions__advantages-list-item:first-child & {
             padding-top: 0;
         }
+
+        .solutions__advantages-list-item:last-child & {
+            border-bottom: none;
+        }
     }
 }
 
@@ -281,11 +285,15 @@
 }
 
 .solutions__projects-card-image-container {
+    border-radius: 1.4rem;
+    overflow: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
     @include breakpointMF(small-tablet) {
-        padding: 3rem;
+        margin: 3rem;
         grid-column: span 7;
         align-self: flex-start;
-        padding-right: 1rem;
+        margin-right: 1rem;
     }
 
     @include breakpoint(mobile) {
@@ -296,11 +304,15 @@
 .solutions__projects-card-image {
     display: block;
     height: auto;
-    border-radius: 1.4rem;
+    transition: transform .5s;
     width: 100%;
 
-    @include breakpoint(mobile) {
+    .card-hovered & {
+        transform: scale(1.02);
+        transition: transform .5s ease-out;
     }
+
+    
 }
 
 .solutions__projects-card-content {
