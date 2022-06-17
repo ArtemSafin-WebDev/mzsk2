@@ -3,6 +3,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
+
+
 export default function shrinkHeadersOnScroll() {
     const elements = Array.from(document.querySelectorAll('.js-shrink-on-scroll'));
 
@@ -18,9 +20,7 @@ export default function shrinkHeadersOnScroll() {
                         end: () => content.offsetHeight,
                         scrub: true,
                         pin: element,
-                       
-                        pinType: 'transform',
-                        
+                        pinType: 'transform'
                     }
                 });
 
