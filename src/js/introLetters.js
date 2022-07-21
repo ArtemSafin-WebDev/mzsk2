@@ -15,23 +15,25 @@ export default function introLetters() {
 
         ScrollTrigger.matchMedia({
             '(min-width: 641px)': () => {
-                const tl = gsap.timeline({
-                    scrollTrigger: {
-                        trigger: '.intro',
-                        start: 'top top',
-                        endTrigger: element,
-                        end: 'bottom top',
-                        markers: false,
-                        scrub: 1
-                    }
-                });
-
-                tl.to(wrapper, {
-                    x: () => element.offsetWidth - wrapper.offsetWidth,
-                    // x: () => -500,
-                    duration: 0.5
-                });
+               
             }
+        });
+
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: '.intro',
+                start: 'top top',
+                endTrigger: element,
+                end: 'bottom top',
+                markers: false,
+                scrub: 1
+            }
+        });
+
+        tl.to(wrapper, {
+            x: () => element.offsetWidth - wrapper.offsetWidth,
+            // x: () => -500,
+            duration: 0.5
         });
 
         console.log(element.offsetWidth - wrapper.offsetWidth);
