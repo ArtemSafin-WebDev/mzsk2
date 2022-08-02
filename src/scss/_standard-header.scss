@@ -1,29 +1,40 @@
 .standard-header {
     margin-bottom: 2rem;
 
-   
+    &--simple-dark {
+        margin-bottom: 0;
+    }
 }
 
 .standard-header__clipper {
     border-radius: 2rem;
     overflow: hidden;
     backface-visibility: hidden;
+
+    .standard-header--simple-dark & {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
 }
 
 .standard-header__content {
     position: relative;
     z-index: 1;
     background: linear-gradient(180deg, #1f73e0 -5.16%, #ffffff 464.29%);
-   
+
     color: #faf8f5;
-  
+
     padding-top: 2.5rem;
     padding-bottom: 4rem;
 
- 
-
     .standard-header--large & {
         min-height: min(calc(100vh - 4rem), 90rem);
+    }
+
+    .standard-header--simple-dark & {
+        background: #f0f3f7;
+        color: var(--text-color);
+        min-height: auto;
     }
 
     @include breakpointMF(small-tablet) {
@@ -35,8 +46,6 @@
         &--stretched {
             align-content: stretch;
         }
-
-       
     }
 
     @include breakpoint(mobile) {
@@ -48,11 +57,11 @@
             min-height: 25rem !important;
         }
 
+      
+
         .standard-header--large & {
             min-height: auto;
         }
-
-        
     }
 }
 
@@ -63,6 +72,10 @@
     width: 100%;
     height: 100%;
     z-index: -1;
+
+    .standard-header--simple-dark & {
+        display: none;
+    }
 
     &::after {
         content: '';
@@ -77,9 +90,9 @@
 
     &--gradient-overlay {
         &::after {
-            background: linear-gradient(0deg, rgba(0, 0, 0, 0) 76.73%, rgba(0, 0, 0, 0.2) 100%), linear-gradient(180deg, rgba(0, 0, 0, 0) 71.33%, rgba(0, 0, 0, 0.4) 106.35%);
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0) 76.73%, rgba(0, 0, 0, 0.2) 100%),
+                linear-gradient(180deg, rgba(0, 0, 0, 0) 71.33%, rgba(0, 0, 0, 0.4) 106.35%);
         }
-       
     }
 }
 
@@ -104,9 +117,9 @@
     margin-bottom: 5rem;
     opacity: 0;
     visibility: hidden;
-   
+
     clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
-    
+
     .animatable & {
         opacity: 1;
         visibility: inherit;
@@ -117,6 +130,10 @@
     @include breakpoint(mobile) {
         margin-bottom: 2.8rem;
         gap: 1.8rem;
+
+        .standard-header--simple-dark & {
+            margin-bottom: 0;
+        }
     }
 }
 
@@ -325,7 +342,7 @@
     display: inline-flex;
     align-items: center;
     gap: 1rem;
-    transition: opacity .2s;
+    transition: opacity 0.2s;
 
     @include breakpoint(mobile) {
         margin: 0;
@@ -358,7 +375,6 @@
     margin-top: -1rem;
 
     @include breakpoint(mobile) {
-       
         font-style: normal;
         font-weight: 700;
         font-size: 2rem;

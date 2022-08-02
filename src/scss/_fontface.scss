@@ -21,3 +21,10 @@
     font-style: normal;
     font-display: swap;
 }
+@font-face {
+    font-family: 'Inter';
+    src: url('../assets/fonts/Inter-Italic.woff2') format('woff2'), url('../assets/fonts/Inter-Italic.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}

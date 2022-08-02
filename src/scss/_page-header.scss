@@ -64,6 +64,8 @@
     flex-direction: column;
     pointer-events: all;
 
+   
+
     .fading & {
         pointer-events: none;
     }
@@ -87,9 +89,24 @@
         }
     }
 
+    .page-header--dark & {
+        border-color: var(--text-color);
+
+        & > span {
+            background-color: var(--text-color);
+        }
+    }
+
     .mobile-menu-open & {
         background-color: var(--text-color);
         border-color: var(--text-color);
+    }
+
+
+    .mobile-menu-open .page-header--dark & {
+        & > span {
+            background-color: #fff;
+        }
     }
 }
 
@@ -130,9 +147,23 @@
         color: #faf8f5;
     }
 
-    .no-touch &:hover,
-    .touch &:active {
+    &:hover {
         text-decoration-color: #faf8f5;
+    }
+
+
+    .page-header--dark & {
+        color: var(--text-color);
+
+        &:link,
+        &:visited {
+            color: var(--text-color);
+        }
+       
+
+        &:hover {
+            text-decoration-color: var(--text-color);
+        }
     }
 }
 
@@ -154,6 +185,26 @@
     white-space: nowrap;
     pointer-events: all;
 
+    &:link,
+    &:visited {
+        color: #faf8f5;
+    }
+
+    &:hover {
+        background: #faf8f5;
+        color: var(--primary-color);
+    }
+
+    .page-header--dark & {
+        border-color: var(--text-color);
+        color: var(--text-color);
+
+        &:hover {
+            background: var(--text-color);
+            color: white;
+        }
+    }
+
     @include breakpoint(mobile) {
         margin-right: 0.7rem;
         font-style: normal;
@@ -168,14 +219,5 @@
     &:last-child {
         margin-right: 0;
     }
-    &:link,
-    &:visited {
-        color: #faf8f5;
-    }
-
-    .no-touch &:hover,
-    .touch &:active {
-        background: #faf8f5;
-        color: var(--primary-color);
-    }
+   
 }
