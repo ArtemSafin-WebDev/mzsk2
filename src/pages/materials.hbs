@@ -1,0 +1,385 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+
+
+<section class="standard-header">
+    <div class="container">
+        <div class="standard-header__clipper">
+            <div class="standard-header__content">
+                <div class="standard-header__bg" style="--overlay-opacity: 0.3;">
+                    <img src="img/construction.jpg" alt="" class="standard-header__bg-image">
+                </div>
+                <div class="standard-header__logo-wrapper">
+                    <a href="#" class="standard-header__logo">
+                        <img src="img/logo.svg" alt="" class="standard-header__logo-image">
+                        <div class="standard-header__logo-text">
+                            МАРИЙСКИЙ ЗАВОД<br>
+                            СИЛИКАТНОГО<br>
+                            КИРПИЧА
+                        </div>
+                    </a>
+                </div>
+                <div class="standard-header__breadcrumbs">
+                    <a href="#">
+                        Главная
+                        <svg width="14" height="14" aria-hidden="true" class="icon-breadcrumbs-arrow">
+                            <use xlink:href="#breadcrumbs-arrow"></use>
+                        </svg>
+                    </a>
+                    <a href="#" class="active">
+                        Для строителя
+                        <svg width="14" height="14" aria-hidden="true" class="icon-breadcrumbs-arrow">
+                            <use xlink:href="#breadcrumbs-arrow"></use>
+                        </svg>
+                    </a>
+
+                </div>
+                <h1 class="standard-header__main-heading">
+                    Для строителя
+                </h1>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="materials">
+    <div class="container">
+        <div class="materials__content">
+            <h2 class="materials__heading">
+                Расчет потребности и стоимости стеновых строительных материалов для строительства одноэтажного
+                индивидуального частного дома.
+            </h2>
+            <div class="materials__small-text">
+                <p>
+                    Без учёта фундамента, полов, перекрытия, кровли, окон и дверей.
+                </p>
+            </div>
+            <div class="materials__calculator">
+                <form action="/" method="GET" class="materials__calculator-form">
+                    <div class="materials__calculator-type">
+                        <h3 class="materials__calculator-type-heading">
+                            Выберите тип материала стены
+                        </h3>
+                        <div class="materials__calculator-types">
+                            <label class="materials__calculator-type-checkbox">
+                                <input type="radio" name="type" value="1"
+                                    class="materials__calculator-type-checkbox-input" checked="">
+                                <div class="materials__calculator-type-checkbox-content">
+                                    <div class="materials__calculator-type-checkbox-image-container">
+                                        <img src="img/materials/1.jpg" alt=""
+                                            class="materials__calculator-type-checkbox-image">
+                                    </div>
+                                    <div class="materials__calculator-type-checkbox-title">
+                                        Силикатный кирпич
+                                    </div>
+                                </div>
+                            </label>
+                            <label class="materials__calculator-type-checkbox">
+                                <input type="radio" name="type" value="2"
+                                    class="materials__calculator-type-checkbox-input">
+                                <div class="materials__calculator-type-checkbox-content">
+                                    <div class="materials__calculator-type-checkbox-image-container">
+                                        <img src="img/materials/2.jpg" alt=""
+                                            class="materials__calculator-type-checkbox-image">
+                                    </div>
+                                    <div class="materials__calculator-type-checkbox-title">
+                                        Газосиликатный блок с облицовкой кирпичом
+                                    </div>
+                                </div>
+                            </label>
+                            <label class="materials__calculator-type-checkbox">
+                                <input type="radio" name="type" value="3"
+                                    class="materials__calculator-type-checkbox-input">
+                                <div class="materials__calculator-type-checkbox-content">
+                                    <div class="materials__calculator-type-checkbox-image-container">
+                                        <img src="img/materials/3.jpg" alt=""
+                                            class="materials__calculator-type-checkbox-image">
+                                    </div>
+                                    <div class="materials__calculator-type-checkbox-title">
+                                        Оцилиндрованное брёвно
+                                    </div>
+                                </div>
+                            </label>
+                            <label class="materials__calculator-type-checkbox">
+                                <input type="radio" name="type" value="4"
+                                    class="materials__calculator-type-checkbox-input">
+                                <div class="materials__calculator-type-checkbox-content">
+                                    <div class="materials__calculator-type-checkbox-image-container">
+                                        <img src="img/materials/4.jpg" alt=""
+                                            class="materials__calculator-type-checkbox-image">
+                                    </div>
+                                    <div class="materials__calculator-type-checkbox-title">
+                                        Керамический
+                                        кирпич с утеплителем
+                                        из пенопласта
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="materials__calculator-size">
+                        <h3 class="materials__calculator-size-heading">
+                            укажите Размер строения
+                        </h3>
+                        <div class="materials__calculator-size-row">
+                            <div class="materials__calculator-size-fields">
+                                <div class="materials__calculator-size-field">
+                                    <div class="materials__calculator-size-field-label">
+                                        Высота, м
+                                    </div>
+                                    <input type="tel" class="materials__calculator-size-input js-numeric-input"
+                                        placeholder="6" required="">
+                                </div>
+                                <div class="materials__calculator-size-field">
+                                    <div class="materials__calculator-size-field-label">
+                                        Длина, м
+                                    </div>
+                                    <input type="tel" class="materials__calculator-size-input js-numeric-input"
+                                        placeholder="8" required="">
+                                </div>
+                            </div>
+                            <button class="materials__calculator-submit" type="submit">
+                                рассчитать
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <div class="materials__calculator-results">
+                    <div class="materials__calculator-results-inner">
+                        <h3 class="materials__calculator-results-heading">
+                            Стоимость материалов
+                        </h3>
+                        <div class="materials__calculator-results-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            Материал
+                                        </th>
+                                        <th>
+                                            Количество
+                                        </th>
+                                        <th>
+                                            Цена
+                                        </th>
+                                        <th>
+                                            Сумма
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td data-text="Материал">
+                                            Кирпич силикатный
+                                        </td>
+                                        <td data-text="Количество">
+                                            20 946 000, шт
+                                        </td>
+                                        <td data-text="Цена">
+                                            6 600 ₽
+                                        </td>
+                                        <td data-text="Сумма">
+                                            138 244 ₽
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-text="Материал">
+                                            Кирпич силикатный (облицовочный)
+                                        </td>
+                                        <td data-text="Количество">
+                                            53 000, шт
+                                        </td>
+                                        <td data-text="Цена">
+                                            4 800 ₽
+                                        </td>
+                                        <td data-text="Сумма">
+                                            25 488 ₽
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-text="Материал">
+                                            Смесь кладочная «Силма», м³
+                                        </td>
+                                        <td data-text="Количество">
+                                            10 043 000, шт
+                                        </td>
+                                        <td data-text="Цена">
+                                            4 050 ₽
+                                        </td>
+                                        <td data-text="Сумма">
+                                            40 674 ₽
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-text="Материал">
+                                            Пенопласт, м³
+                                        </td>
+                                        <td data-text="Количество">
+                                            14 300, шт
+                                        </td>
+                                        <td data-text="Цена">
+                                            3 000 ₽
+                                        </td>
+                                        <td data-text="Сумма">
+                                            42 900 ₽
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-text="Материал">
+                                            Смесь сухая штукатурная, т.
+                                        </td>
+                                        <td data-text="Количество">
+                                            8, шт
+                                        </td>
+                                        <td data-text="Цена">
+                                            2 400 ₽
+                                        </td>
+                                        <td data-text="Сумма">
+                                            19 200 ₽
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="materials__calculator-results-total">
+                            <div class="materials__calculator-results-total-text-content">
+                                <div class="materials__calculator-results-total-date">
+                                    Цены действительны на 1 мая 2022
+                                </div>
+                                <div class="materials__calculator-results-total-remark">
+                                    Стоимость стеновых материалов в расчёте 1 м² — 3 290 ₽
+                                </div>
+                            </div>
+                            <div class="materials__calculator-results-total-amount">
+                                <div class="materials__calculator-results-total-amount-text">
+                                    Итого:
+                                </div>
+                                <div class="materials__calculator-results-total-amount-number">
+                                    266 506 ₽
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="documents">
+    <div class="container">
+        <div class="documents__content">
+            <div class="documents__blocks">
+                <div class="documents__block">
+                    <h3 class="documents__block-heading">
+                        Договоры
+                    </h3>
+                    <ul class="documents__list">
+                        <li class="documents__list-item">
+                            <a href="#" class="documents__link">
+                                <svg width="14" height="14" aria-hidden="true" class="icon-link">
+                                    <use xlink:href="#link"></use>
+                                </svg>
+                                Договор поставки продукции ЗАО «МЗСК»
+                            </a>
+                        </li>
+                        <li class="documents__list-item">
+                            <a href="#" class="documents__link">
+                                <svg width="14" height="14" aria-hidden="true" class="icon-link">
+                                    <use xlink:href="#link"></use>
+                                </svg>
+                                ПРИЛОЖЕНИЯ К Договору поставки продукции ЗАО «МЗСК»
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="documents__block">
+                    <h3 class="documents__block-heading">
+                        Нормативные документы
+                    </h3>
+                    <ul class="documents__list">
+                        <li class="documents__list-item">
+                            <a href="#" class="documents__link">
+                                <svg width="14" height="14" aria-hidden="true" class="icon-link">
+                                    <use xlink:href="#link"></use>
+                                </svg>
+                                Сводная ведомость результатов проведения специальной оценки условий труда и Перечень
+                                рекомендуемых мероприятий
+                            </a>
+                        </li>
+                        <li class="documents__list-item">
+                            <a href="#" class="documents__link">
+                                <svg width="14" height="14" aria-hidden="true" class="icon-link">
+                                    <use xlink:href="#link"></use>
+                                </svg>
+                                Перечень рекомендуемых мероприятий
+                            </a>
+                        </li>
+                        <li class="documents__list-item">
+                            <a href="#" class="documents__link">
+                                <svg width="14" height="14" aria-hidden="true" class="icon-link">
+                                    <use xlink:href="#link"></use>
+                                </svg>
+                                Сводная ведомость
+                            </a>
+                        </li>
+                        <li class="documents__list-item">
+                            <a href="#" class="documents__link">
+                                <svg width="14" height="14" aria-hidden="true" class="icon-link">
+                                    <use xlink:href="#link"></use>
+                                </svg>
+                                Протокол испытаний 83/21 от 2021.03.29
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="contact-us js-block-to-reveal" id="contact">
+    <div class="container">
+        <div class="contact-us__row">
+            <div class="contacts-us__content">
+                <h2 class="contact-us__heading">
+                    Есть вопросы?
+                </h2>
+                <form action="/" method="POST" class="contact-us__form" data-need-validation="">
+                    <h3 class="contacts-us__form-heading">
+                        Напишите нам, наши менеджеры свяжутся с&nbsp;вами в самое ближайшее время
+                    </h3>
+                    <div class="contacts-us__form-fields">
+                        <div class="contacts-us__form-field">
+                            <input type="text" class="contacts-us__form-input" placeholder="Имя" required="">
+                        </div>
+                        <div class="contacts-us__form-field">
+                            <input type="tel" class="contacts-us__form-input js-phone-input" placeholder="Телефон"
+                                required="" data-parsley-phone="">
+                        </div>
+                        <div class="contacts-us__form-field">
+                            <input type="text" class="contacts-us__form-input" placeholder="Вопрос (необязательно)">
+                        </div>
+                    </div>
+                    <div class="contacts-us__form-controls">
+                        <button type="submit" class="contacts-us__form-submit">
+                            Отправить
+                        </button>
+                        <div class="contacts-us__form-policy">
+                            Нажимая “Отправить” вы соглашаетесь <a href="#">с политикой конфиденциальности</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="contacts-us__image-wrapper">
+                <img src="img/contact-us.jpg" alt="" class="contacts-us__image">
+            </div>
+        </div>
+    </div>
+</section>
+
+{{/content}}
+{{/extend}}

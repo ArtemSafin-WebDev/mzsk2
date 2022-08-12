@@ -27,6 +27,7 @@ import solutionsCards from './solutionsCards';
 import shrinkHeadersOnScroll from './shrinkHeadersOnScroll';
 import productCards from './productCards';
 import servicesSlider from './services';
+import maps from './maps';
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -58,6 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
     shrinkHeadersOnScroll();
     productCards();
     servicesSlider();
+    maps();
 
 
     const pageContent = document.querySelector('.page-content');

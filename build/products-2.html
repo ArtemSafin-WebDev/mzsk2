@@ -8,7 +8,8 @@
     <meta name="format-detection" content="telephone=no">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10,400;0,400;0,600;0,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10,400;0,400;0,600;0,700&display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css" />
     <title>
@@ -2472,6 +2473,47 @@
                 </div>
             </form>
         </div>
+    </div>
+    <div class="modal js-modal" id="dealer-modal">
+        <div class="modal__inner">
+            <button class="modal__close js-close-modal">
+                <svg width="14" height="14" aria-hidden="true" class="icon-close">
+                    <use xlink:href="#close"></use>
+                </svg>
+            </button>
+            <h3 class="modal__heading">
+                заявка на получение оптового прайс-листа
+            </h3>
+            <form action="/" method="POST" class="modal__form" data-need-validation="">
+                <div class="modal__form-fields">
+                    <div class="modal__form-field">
+                        <input type="text" class="modal__form-input" placeholder="Имя" required="">
+                    </div>
+                    <div class="modal__form-field">
+                        <input type="tel" class="modal__form-input js-phone-input" placeholder="Телефон" required=""
+                            data-parsley-phone="">
+                    </div>
+                    <div class="modal__form-field">
+                        <input type="email" class="modal__form-input" placeholder="Е-mail" required="">
+                    </div>
+                    <div class="modal__form-field">
+                        <input type="text" class="modal__form-input" placeholder="Название организации" required="">
+                    </div>
+                    <div class="modal__form-field">
+                        <input type="text" class="modal__form-input" placeholder="Регион" required="">
+                    </div>
+    
+                </div>
+                <div class="modal__form-controls">
+                    <button type="submit" class="modal__form-submit">
+                        Отправить
+                    </button>
+                    <div class="modal__form-policy">
+                        Нажимая “Отправить” вы соглашаетесь <a href="#">с&nbsp;политикой конфиденциальности</a>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>    <style>
         .ie-placeholder {
             z-index: 4000;
@@ -2504,6 +2546,9 @@
             Извините, ваш браузер не поддерживается
         </div>
     </div>    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=3e83bc93-ad4d-49ca-8604-553ca1211b83
+&lang=ru_RU" type="text/javascript">
+    </script>
     <script src="js/app.js"></script>
     <script src="assets/js/backend.js"></script>
 </body>

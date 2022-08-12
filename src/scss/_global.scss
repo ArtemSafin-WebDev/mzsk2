@@ -217,3 +217,10 @@ select:-webkit-autofill:focus {
 .lineParent {
     overflow: hidden;
 }
+
+[class*='ymaps-2'][class*='-ground-pane'] {
+    filter: grayscale(100%);
+}
+[class*='ymaps-2'][class*='-copyrights-pane'] {
+    display: none;
+}

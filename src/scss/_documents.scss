@@ -1,0 +1,106 @@
+.documents {
+    margin-bottom: 4rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 2rem;
+    }
+}
+
+.documents__content {
+    background: #f0f3f7;
+    border-radius: 2rem;
+ 
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+
+
+    @include breakpointMF(small-tablet) {
+        display: grid;
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+        grid-gap: 2rem;
+    }
+
+
+    @include breakpoint(mobile) {
+        padding: 2rem;
+    }
+}
+
+.documents__blocks {
+    
+   
+
+
+    @include breakpointMF(small-tablet) {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-gap: 2rem;
+        grid-column: 3 / 11;
+    }
+
+
+    @include breakpoint(mobile) {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+}
+
+.documents__block {
+}
+
+.documents__block-heading {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.2rem;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    margin-bottom: 3.5rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.documents__list {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-gap: 1.6rem;
+
+
+    @include breakpoint(mobile) {
+        grid-gap: 1.2rem;
+    }
+}
+
+.documents__link {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 135%;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
+        gap: 1rem;
+    }
+
+    svg {
+        flex-shrink: 0;
+        width: 1rem;
+        height: 1rem;
+        margin-top: 0.25rem;
+        fill: currentColor;
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        color: var(--primary-color);
+    }
+}

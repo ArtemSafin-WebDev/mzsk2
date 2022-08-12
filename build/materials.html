@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css" />
     <title>
-        Марийский завод силикатного кирпича
+        Для строителя
     </title>
 </head>
 
@@ -261,262 +261,339 @@
             <main class="page-main">
 
 
-<section class="products js-block-to-reveal">
+
+<section class="standard-header">
     <div class="container">
-        <div class="products__content">
-
-            <div class="products__row">
-                <div class="products__sidebar">
-                    <div class="products__sidebar-inner">
-
-
-                        <div class="products__nav">
-                            <ul class="products__nav-list">
-                                <li class="products__nav-list-item">
-                                    <a href="#" class="products__nav-link active">
-                                        Кирпич силикатный
-                                    </a>
-                                </li>
-                                <li class="products__nav-list-item">
-                                    <a href="#" class="products__nav-link">
-                                        Мелкие стеновые блоки из ячеистого бетона
-                                    </a>
-                                </li>
-                                <li class="products__nav-list-item">
-                                    <a href="#" class="products__nav-link">
-                                        Сухие строительные смеси марки СИЛма
-                                    </a>
-                                </li>
-                                <li class="products__nav-list-item">
-                                    <a href="#" class="products__nav-link">
-                                        Известесодержащее вяжущее
-                                    </a>
-                                </li>
-                                <li class="products__nav-list-item">
-                                    <a href="#" class="products__nav-link">
-                                        Утеплитель
-                                    </a>
-                                </li>
-                                <li class="products__nav-list-item">
-                                    <a href="#" class="products__nav-link">
-                                        Фасадная краска
-                                    </a>
-                                </li>
-                            </ul>
+        <div class="standard-header__clipper">
+            <div class="standard-header__content">
+                <div class="standard-header__bg" style="--overlay-opacity: 0.3;">
+                    <img src="img/construction.jpg" alt="" class="standard-header__bg-image">
+                </div>
+                <div class="standard-header__logo-wrapper">
+                    <a href="#" class="standard-header__logo">
+                        <img src="img/logo.svg" alt="" class="standard-header__logo-image">
+                        <div class="standard-header__logo-text">
+                            МАРИЙСКИЙ ЗАВОД<br>
+                            СИЛИКАТНОГО<br>
+                            КИРПИЧА
                         </div>
-                        <a href="#" class="products__price">
-                            Скачать прайс-лист
-                        </a>
+                    </a>
+                </div>
+                <div class="standard-header__breadcrumbs">
+                    <a href="#">
+                        Главная
+                        <svg width="14" height="14" aria-hidden="true" class="icon-breadcrumbs-arrow">
+                            <use xlink:href="#breadcrumbs-arrow"></use>
+                        </svg>
+                    </a>
+                    <a href="#" class="active">
+                        Для строителя
+                        <svg width="14" height="14" aria-hidden="true" class="icon-breadcrumbs-arrow">
+                            <use xlink:href="#breadcrumbs-arrow"></use>
+                        </svg>
+                    </a>
+
+                </div>
+                <h1 class="standard-header__main-heading">
+                    Для строителя
+                </h1>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="materials">
+    <div class="container">
+        <div class="materials__content">
+            <h2 class="materials__heading">
+                Расчет потребности и стоимости стеновых строительных материалов для строительства одноэтажного
+                индивидуального частного дома.
+            </h2>
+            <div class="materials__small-text">
+                <p>
+                    Без учёта фундамента, полов, перекрытия, кровли, окон и дверей.
+                </p>
+            </div>
+            <div class="materials__calculator">
+                <form action="/" method="GET" class="materials__calculator-form">
+                    <div class="materials__calculator-type">
+                        <h3 class="materials__calculator-type-heading">
+                            Выберите тип материала стены
+                        </h3>
+                        <div class="materials__calculator-types">
+                            <label class="materials__calculator-type-checkbox">
+                                <input type="radio" name="type" value="1"
+                                    class="materials__calculator-type-checkbox-input" checked="">
+                                <div class="materials__calculator-type-checkbox-content">
+                                    <div class="materials__calculator-type-checkbox-image-container">
+                                        <img src="img/materials/1.jpg" alt=""
+                                            class="materials__calculator-type-checkbox-image">
+                                    </div>
+                                    <div class="materials__calculator-type-checkbox-title">
+                                        Силикатный кирпич
+                                    </div>
+                                </div>
+                            </label>
+                            <label class="materials__calculator-type-checkbox">
+                                <input type="radio" name="type" value="2"
+                                    class="materials__calculator-type-checkbox-input">
+                                <div class="materials__calculator-type-checkbox-content">
+                                    <div class="materials__calculator-type-checkbox-image-container">
+                                        <img src="img/materials/2.jpg" alt=""
+                                            class="materials__calculator-type-checkbox-image">
+                                    </div>
+                                    <div class="materials__calculator-type-checkbox-title">
+                                        Газосиликатный блок с облицовкой кирпичом
+                                    </div>
+                                </div>
+                            </label>
+                            <label class="materials__calculator-type-checkbox">
+                                <input type="radio" name="type" value="3"
+                                    class="materials__calculator-type-checkbox-input">
+                                <div class="materials__calculator-type-checkbox-content">
+                                    <div class="materials__calculator-type-checkbox-image-container">
+                                        <img src="img/materials/3.jpg" alt=""
+                                            class="materials__calculator-type-checkbox-image">
+                                    </div>
+                                    <div class="materials__calculator-type-checkbox-title">
+                                        Оцилиндрованное брёвно
+                                    </div>
+                                </div>
+                            </label>
+                            <label class="materials__calculator-type-checkbox">
+                                <input type="radio" name="type" value="4"
+                                    class="materials__calculator-type-checkbox-input">
+                                <div class="materials__calculator-type-checkbox-content">
+                                    <div class="materials__calculator-type-checkbox-image-container">
+                                        <img src="img/materials/4.jpg" alt=""
+                                            class="materials__calculator-type-checkbox-image">
+                                    </div>
+                                    <div class="materials__calculator-type-checkbox-title">
+                                        Керамический
+                                        кирпич с утеплителем
+                                        из пенопласта
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="materials__calculator-size">
+                        <h3 class="materials__calculator-size-heading">
+                            укажите Размер строения
+                        </h3>
+                        <div class="materials__calculator-size-row">
+                            <div class="materials__calculator-size-fields">
+                                <div class="materials__calculator-size-field">
+                                    <div class="materials__calculator-size-field-label">
+                                        Высота, м
+                                    </div>
+                                    <input type="tel" class="materials__calculator-size-input js-numeric-input"
+                                        placeholder="6" required="">
+                                </div>
+                                <div class="materials__calculator-size-field">
+                                    <div class="materials__calculator-size-field-label">
+                                        Длина, м
+                                    </div>
+                                    <input type="tel" class="materials__calculator-size-input js-numeric-input"
+                                        placeholder="8" required="">
+                                </div>
+                            </div>
+                            <button class="materials__calculator-submit" type="submit">
+                                рассчитать
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <div class="materials__calculator-results">
+                    <div class="materials__calculator-results-inner">
+                        <h3 class="materials__calculator-results-heading">
+                            Стоимость материалов
+                        </h3>
+                        <div class="materials__calculator-results-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            Материал
+                                        </th>
+                                        <th>
+                                            Количество
+                                        </th>
+                                        <th>
+                                            Цена
+                                        </th>
+                                        <th>
+                                            Сумма
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td data-text="Материал">
+                                            Кирпич силикатный
+                                        </td>
+                                        <td data-text="Количество">
+                                            20 946 000, шт
+                                        </td>
+                                        <td data-text="Цена">
+                                            6 600 ₽
+                                        </td>
+                                        <td data-text="Сумма">
+                                            138 244 ₽
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-text="Материал">
+                                            Кирпич силикатный (облицовочный)
+                                        </td>
+                                        <td data-text="Количество">
+                                            53 000, шт
+                                        </td>
+                                        <td data-text="Цена">
+                                            4 800 ₽
+                                        </td>
+                                        <td data-text="Сумма">
+                                            25 488 ₽
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-text="Материал">
+                                            Смесь кладочная «Силма», м³
+                                        </td>
+                                        <td data-text="Количество">
+                                            10 043 000, шт
+                                        </td>
+                                        <td data-text="Цена">
+                                            4 050 ₽
+                                        </td>
+                                        <td data-text="Сумма">
+                                            40 674 ₽
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-text="Материал">
+                                            Пенопласт, м³
+                                        </td>
+                                        <td data-text="Количество">
+                                            14 300, шт
+                                        </td>
+                                        <td data-text="Цена">
+                                            3 000 ₽
+                                        </td>
+                                        <td data-text="Сумма">
+                                            42 900 ₽
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-text="Материал">
+                                            Смесь сухая штукатурная, т.
+                                        </td>
+                                        <td data-text="Количество">
+                                            8, шт
+                                        </td>
+                                        <td data-text="Цена">
+                                            2 400 ₽
+                                        </td>
+                                        <td data-text="Сумма">
+                                            19 200 ₽
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="materials__calculator-results-total">
+                            <div class="materials__calculator-results-total-text-content">
+                                <div class="materials__calculator-results-total-date">
+                                    Цены действительны на 1 мая 2022
+                                </div>
+                                <div class="materials__calculator-results-total-remark">
+                                    Стоимость стеновых материалов в расчёте 1 м² — 3 290 ₽
+                                </div>
+                            </div>
+                            <div class="materials__calculator-results-total-amount">
+                                <div class="materials__calculator-results-total-amount-text">
+                                    Итого:
+                                </div>
+                                <div class="materials__calculator-results-total-amount-number">
+                                    266 506 ₽
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="products__main">
-                    <div class="products__main-scroll-wrapper">
-                        <div class="products__main-inner">
+            </div>
+        </div>
+    </div>
+</section>
 
 
-
-                            <a href="#" class="products__logo">
-                                <img src="img/logo.svg" alt="" class="products__logo-image">
-                                <div class="products__logo-text">
-                                    МАРИЙСКИЙ ЗАВОД<br>
-                                    СИЛИКАТНОГО<br>
-                                    КИРПИЧА
-                                </div>
+<section class="documents">
+    <div class="container">
+        <div class="documents__content">
+            <div class="documents__blocks">
+                <div class="documents__block">
+                    <h3 class="documents__block-heading">
+                        Договоры
+                    </h3>
+                    <ul class="documents__list">
+                        <li class="documents__list-item">
+                            <a href="#" class="documents__link">
+                                <svg width="14" height="14" aria-hidden="true" class="icon-link">
+                                    <use xlink:href="#link"></use>
+                                </svg>
+                                Договор поставки продукции ЗАО «МЗСК»
                             </a>
-                            <div class="products__breadcrumbs">
-                                <a href="#">
-                                    Главная
-                                    <svg width="14" height="14" aria-hidden="true" class="icon-breadcrumbs-arrow">
-                                        <use xlink:href="#breadcrumbs-arrow"></use>
-                                    </svg>
-                                </a>
-
-                                <a href="#" class="active">
-                                    Продукция
-                                    <svg width="14" height="14" aria-hidden="true" class="icon-breadcrumbs-arrow">
-                                        <use xlink:href="#breadcrumbs-arrow"></use>
-                                    </svg>
-                                </a>
-                            </div>
-                            <h1 class="products__main-heading">
-                                Продукция
-                            </h1>
-                            <div class="products__categories-block">
-
-
-                                <ul class="products__categories-list">
-                                    <li class="products__categories-list-item">
-                                        <a href="#" class="products__categories-card">
-                                            <div class="products__categories-card-image-container">
-                                                <img src="img/products-categories/1.webp" alt=""
-                                                    class="products__categories-card-image">
-                                            </div>
-                                            <div class="products__categories-card-content">
-                                                <h4 class="products__categories-card-title">
-                                                    Кирпич силикатный ГОСТ 379-2015
-                                                </h4>
-                                                <div class="products__categories-card-text">
-                                                    <p>
-                                                        Применяется для кладки и отделки наружных и внутренних стен
-                                                        зданий и
-                                                        сооружений.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="products__categories-list-item">
-                                        <a href="#" class="products__categories-card">
-                                            <div class="products__categories-card-image-container">
-                                                <img src="img/products-categories/2.webp" alt=""
-                                                    class="products__categories-card-image">
-                                            </div>
-                                            <div class="products__categories-card-content">
-                                                <h4 class="products__categories-card-title">
-                                                    Мелкие стеновые блоки из ячеистого бетона
-                                                </h4>
-                                                <div class="products__categories-card-text">
-                                                    <p>
-                                                        Это соответствующий духу нынешнего времени строительный материал
-                                                        для
-                                                        кладки
-                                                        стен и перегородок, представляющий из себя искусственный камень
-                                                        с
-                                                        пористой
-                                                        структурой и низким коэффициентом теплопроводности.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="products__categories-list-item">
-                                        <a href="#" class="products__categories-card">
-                                            <div class="products__categories-card-image-container">
-                                                <img src="img/products-categories/3.webp" alt=""
-                                                    class="products__categories-card-image">
-                                            </div>
-                                            <div class="products__categories-card-content">
-                                                <h4 class="products__categories-card-title">
-                                                    Известе&shy;содержащее вяжущее
-                                                </h4>
-                                                <div class="products__categories-card-text">
-                                                    <p>
-                                                        Известесодержащее вяжущее - это смесь извести с инертными
-                                                        добавками.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="products__categories-list-item">
-                                        <a href="#" class="products__categories-card">
-                                            <div class="products__categories-card-image-container">
-                                                <img src="img/products-categories/4.webp" alt=""
-                                                    class="products__categories-card-image">
-                                            </div>
-                                            <div class="products__categories-card-content">
-                                                <h4 class="products__categories-card-title">
-                                                    Сухие строительные смеси марки СИЛма
-                                                </h4>
-                                                <div class="products__categories-card-text">
-                                                    <p>
-                                                        Сухие строительные смеси — это многокомпонентные, составы на
-                                                        основе
-                                                        наполнителей, заполнителей, вяжущих компонентов, модифицирующих
-                                                        добавок.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="products__categories-list-item">
-                                        <a href="#" class="products__categories-card">
-                                            <div class="products__categories-card-image-container">
-                                                <img src="img/products-categories/1.webp" alt=""
-                                                    class="products__categories-card-image">
-                                            </div>
-                                            <div class="products__categories-card-content">
-                                                <h4 class="products__categories-card-title">
-                                                    Кирпич силикатный ГОСТ 379-2015
-                                                </h4>
-                                                <div class="products__categories-card-text">
-                                                    <p>
-                                                        Применяется для кладки и отделки наружных и внутренних стен
-                                                        зданий и
-                                                        сооружений.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="products__categories-list-item">
-                                        <a href="#" class="products__categories-card">
-                                            <div class="products__categories-card-image-container">
-                                                <img src="img/products-categories/2.webp" alt=""
-                                                    class="products__categories-card-image">
-                                            </div>
-                                            <div class="products__categories-card-content">
-                                                <h4 class="products__categories-card-title">
-                                                    Мелкие стеновые блоки из ячеистого бетона
-                                                </h4>
-                                                <div class="products__categories-card-text">
-                                                    <p>
-                                                        Это соответствующий духу нынешнего времени строительный материал
-                                                        для
-                                                        кладки
-                                                        стен и перегородок, представляющий из себя искусственный камень
-                                                        с
-                                                        пористой
-                                                        структурой и низким коэффициентом теплопроводности.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="products__categories-list-item">
-                                        <a href="#" class="products__categories-card">
-                                            <div class="products__categories-card-image-container">
-                                                <img src="img/products-categories/3.webp" alt=""
-                                                    class="products__categories-card-image">
-                                            </div>
-                                            <div class="products__categories-card-content">
-                                                <h4 class="products__categories-card-title">
-                                                    Известе&shy;содержащее вяжущее
-                                                </h4>
-                                                <div class="products__categories-card-text">
-                                                    <p>
-                                                        Известесодержащее вяжущее - это смесь извести с инертными
-                                                        добавками.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="products__categories-list-item">
-                                        <a href="#" class="products__categories-card">
-                                            <div class="products__categories-card-image-container">
-                                                <img src="img/products-categories/4.webp" alt=""
-                                                    class="products__categories-card-image">
-                                            </div>
-                                            <div class="products__categories-card-content">
-                                                <h4 class="products__categories-card-title">
-                                                    Сухие строительные смеси марки СИЛма
-                                                </h4>
-                                                <div class="products__categories-card-text">
-                                                    <p>
-                                                        Сухие строительные смеси — это многокомпонентные, составы на
-                                                        основе
-                                                        наполнителей, заполнителей, вяжущих компонентов, модифицирующих
-                                                        добавок.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                        </li>
+                        <li class="documents__list-item">
+                            <a href="#" class="documents__link">
+                                <svg width="14" height="14" aria-hidden="true" class="icon-link">
+                                    <use xlink:href="#link"></use>
+                                </svg>
+                                ПРИЛОЖЕНИЯ К Договору поставки продукции ЗАО «МЗСК»
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="documents__block">
+                    <h3 class="documents__block-heading">
+                        Нормативные документы
+                    </h3>
+                    <ul class="documents__list">
+                        <li class="documents__list-item">
+                            <a href="#" class="documents__link">
+                                <svg width="14" height="14" aria-hidden="true" class="icon-link">
+                                    <use xlink:href="#link"></use>
+                                </svg>
+                                Сводная ведомость результатов проведения специальной оценки условий труда и Перечень
+                                рекомендуемых мероприятий
+                            </a>
+                        </li>
+                        <li class="documents__list-item">
+                            <a href="#" class="documents__link">
+                                <svg width="14" height="14" aria-hidden="true" class="icon-link">
+                                    <use xlink:href="#link"></use>
+                                </svg>
+                                Перечень рекомендуемых мероприятий
+                            </a>
+                        </li>
+                        <li class="documents__list-item">
+                            <a href="#" class="documents__link">
+                                <svg width="14" height="14" aria-hidden="true" class="icon-link">
+                                    <use xlink:href="#link"></use>
+                                </svg>
+                                Сводная ведомость
+                            </a>
+                        </li>
+                        <li class="documents__list-item">
+                            <a href="#" class="documents__link">
+                                <svg width="14" height="14" aria-hidden="true" class="icon-link">
+                                    <use xlink:href="#link"></use>
+                                </svg>
+                                Протокол испытаний 83/21 от 2021.03.29
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
