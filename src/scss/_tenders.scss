@@ -73,7 +73,8 @@
         display: flex;
         align-items: center;
         gap: 1.5rem;
-        min-height: 10rem;
+        min-height: 7rem;
+        padding: 1.5rem 0;
     }
 }
 
@@ -120,7 +121,7 @@
     grid-column: 3 / 11;
 
     @include breakpoint(mobile) {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
     }
 }
 
@@ -147,9 +148,19 @@
 }
 
 .tenders__list-item {
-    border-bottom: 1px solid #dfe3e9;
+    border-top: 1px solid #dfe3e9;
 
-    &:last-child {
+    & > ul {
+        padding-left: 5rem;
+        margin-top: -1rem;
+
+        @include breakpoint(mobile) {
+            padding-left: 1.5rem;
+        }
+        
+    }
+
+    &:first-child {
         border: none;
     }
 }
@@ -159,16 +170,14 @@
     grid-template-columns: minmax(0, 2.3fr) minmax(0, 1fr) auto;
     grid-gap: 2rem;
     align-items: center;
-    padding: 2rem 0;
+    padding: 1.6rem 0;
+    min-height: 6.4rem;
 
     @include breakpoint(mobile) {
-        padding: 1.8rem 0;
+        padding: 1.4rem 0;
         grid-template-columns: minmax(0, 1fr) minmax(0, auto);
-        grid-template-areas: 'title price' 'link link';
-    }
-
-    .tenders__list-item:first-child & {
-        padding-top: 0;
+        grid-gap: 1.5rem;
+       
     }
 }
 
@@ -180,7 +189,8 @@
     font-family: var(--inter);
 
     @include breakpoint(mobile) {
-        grid-area: title;
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
     }
 }
 
@@ -192,7 +202,8 @@
     font-family: var(--inter);
 
     @include breakpoint(mobile) {
-        grid-area: price;
+        grid-column: 1 / -1;
+        grid-row: 2 / 3;
     }
 }
 
@@ -216,8 +227,10 @@
     transition: background-color 0.2s, color 0.2s, border-color 0.2s;
     color: var(--text-color);
 
+    @include breakpointMF(small-tablet) {
+        grid-column: 3 / 4;
+    }
     @include breakpoint(mobile) {
-       
         font-style: normal;
         font-weight: 400;
         font-size: 1rem;
@@ -226,7 +239,8 @@
         text-transform: uppercase;
         padding: 1.2rem 1.6rem;
         border-radius: 7rem;
-        grid-area: link;
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
         justify-self: flex-end;
     }
     &:link,
