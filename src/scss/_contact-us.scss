@@ -318,7 +318,7 @@
     border: 1px solid #faf8f5;
     white-space: nowrap;
     flex-shrink: 0;
-    transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+    transition: background-color 0.2s, border-color 0.2s, color 0.2s, opacity .2s;
     padding: 1.4rem 2rem;
     border-radius: 7rem;
     text-align: center;
@@ -353,6 +353,11 @@
         &:link,
         &:visited {
             color: var(--primary-color);
+        }
+
+
+        &:hover {
+            opacity: 0.8;
         }
     }
 }

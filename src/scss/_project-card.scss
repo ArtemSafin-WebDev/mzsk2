@@ -37,6 +37,9 @@
     transition: color 0.2s;
     color: #353535;
     margin-bottom: 2.5rem;
+    display: flex;
+    align-items: flex-start;
+    gap: .5rem;
 
     @include breakpoint(mobile) {
         font-style: normal;
@@ -47,23 +50,24 @@
         letter-spacing: 0.01em;
         text-transform: uppercase;
         margin-bottom: 1.7rem;
+        gap: .25rem;
     }
     svg {
-        display: inline-block;
+       
         width: 2.4rem;
         height: 2.4rem;
         position: relative;
-        margin-left: 0.5rem;
+        top: .1rem;
         fill: currentColor;
         transition: opacity 0.2s;
-        top: 0.4rem;
+        // top: 0.4rem;
         opacity: 0;
 
         @include breakpoint(mobile) {
             width: 2rem;
             height: 2rem;
             top: .25rem;
-            margin-left: 0.2rem;
+            
         }
     }
 }
@@ -79,7 +83,7 @@
     @include breakpoint(mobile) {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        grid-gap: 2rem;
+        grid-gap: 1rem;
         grid-row-gap: 1.5rem;
         margin-bottom: 2rem;
     }
@@ -87,7 +91,9 @@
 
 .project-card__specs-item {
     flex-shrink: 0;
-    white-space: nowrap;
+    // white-space: nowrap;
+
+    
 }
 
 .project-card__specs-item-key {
