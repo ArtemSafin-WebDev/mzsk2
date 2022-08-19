@@ -136,7 +136,7 @@
     letter-spacing: 0.01em;
     text-transform: uppercase;
     margin-bottom: 2rem;
-
+    white-space: nowrap;
     @include breakpoint(mobile) {
         font-style: normal;
         font-weight: 700;
@@ -147,6 +147,7 @@
         margin-bottom: 2rem;
         display: block;
         order: -3;
+       
     }
     .no-touch &:hover,
     .touch &:active {
