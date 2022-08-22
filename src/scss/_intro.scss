@@ -68,6 +68,54 @@
     }
 }
 
+.intro__top-row {
+    margin-bottom: 5rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 4.8rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 2.8rem;
+        gap: 2.5rem;
+        
+    }
+    .intro__logo {
+        margin-bottom: 0;
+    }
+}
+
+.intro__divider {
+    width: 0.3rem;
+    height: 0.3rem;
+    border-radius: 50%;
+    flex-shrink: 0;
+    background-color: #fff;
+    align-self: flex-start;
+    margin-top: 1.5rem;
+
+
+    opacity: 0;
+    visibility: hidden;
+   
+   
+    .animatable & {
+        opacity: 1;
+        visibility: inherit;
+        transition: opacity 0.3s, visibility 0.3s, clip-path 0.5s;
+       
+    }
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
+}
+
+.intro__rusagro-text {
+    @include breakpoint(mobile) {
+        display: none;
+    }
+}
+
 .intro__logo-image {
     width: 7.6rem;
     height: auto;
@@ -93,6 +141,44 @@
         letter-spacing: 0.08em;
         text-transform: uppercase;
     }
+}
+
+.intro__rusagro-logo {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+
+
+    opacity: 0;
+    visibility: hidden;
+   
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+
+    .animatable & {
+        opacity: 1;
+        visibility: inherit;
+        transition: opacity 0.3s, visibility 0.3s, clip-path 0.5s;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+
+.intro__rusagro-logo-image {
+    width: 4.5rem;
+    height: auto;
+    display: block;
+
+    @include breakpoint(mobile) {
+        width: 5rem;
+    }
+}
+
+.intro__rusagro-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 110%;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
 }
 
 .intro__text {
@@ -1018,7 +1104,7 @@
 
     @include breakpoint(mobile) {
         margin: 0;
-       
+
         font-style: normal;
         font-weight: 400;
         font-size: 1rem;
