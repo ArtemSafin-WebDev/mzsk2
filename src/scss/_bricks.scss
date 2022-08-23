@@ -1,0 +1,67 @@
+.bricks {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    z-index: -1;
+    pointer-events: none;
+
+    .touch & {
+        display: none;
+    }
+}
+
+.bricks__cursor {
+    position: absolute;
+    left: var(--x);
+    top: var(--y);
+
+    z-index: 100;
+    width: 30rem;
+    height: 30rem;
+    transform: translate(-50%, -50%);
+    // background-color: red;
+    mask-image: url('../img/bricks-mask.png');
+    mask-size: 36rem 36rem;
+    mask-repeat: no-repeat;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s, visibility 0s linear 0.4s;
+
+    &.visible {
+        opacity: 1;
+        visibility: inherit;
+        transition: opacity 0.4s, visibility 0.4s;
+    }
+}
+
+.bricks__pattern {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 200vw;
+    height: 200vh;
+
+    background-image: url('../img/brick-pattern.svg');
+    transform: translate(-50%, -50%);
+    background-position: center;
+    background-size: 10rem auto;
+    will-change: transform;
+    transform: translate(-50%, -50%) translateX(calc(var(--x) * -1)) translateY(calc(var(--y) * -1));
+    backface-visibility: hidden;
+
+    &--large {
+        background-size: 15rem auto;
+    }
+
+    &--dark {
+        background-image: url('../img/brick-pattern-dark.svg');
+    }
+
+    // width: 100vw;
+    // height: 100vh;
+
+    // left: 0;
+    // top: 0;
+
+    // transform: translateX(calc(var(--x) * -1)) translateY(calc(var(--y) * -1));
+}

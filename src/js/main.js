@@ -28,6 +28,7 @@ import shrinkHeadersOnScroll from './shrinkHeadersOnScroll';
 import productCards from './productCards';
 import servicesSlider from './services';
 import maps from './maps';
+import bricks from './bricks';
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -60,6 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
     productCards();
     servicesSlider();
     maps();
+    bricks();
 
 
     const pageContent = document.querySelector('.page-content');
