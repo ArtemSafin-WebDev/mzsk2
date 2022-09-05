@@ -9,14 +9,14 @@
 :root {
     --max-container-width: 164rem;
     --content-padding: 2rem;
-    --primary-color: #2274E0;
+    --primary-color: #2274e0;
     --text-color: #353535;
     --helios: 'Helios', 'Montserrat', sans-serif;
     --inter: 'Inter', 'Montserrat', sans-serif;
     --menu-width: 55rem;
 
     @include breakpoint(mobile) {
-        --content-padding: .6rem;
+        --content-padding: 0.6rem;
         --menu-width: 31rem;
     }
 }
@@ -26,8 +26,6 @@ html {
     font-size: 10px;
     -webkit-text-size-adjust: 100%;
 
-  
-   
     @include noHighlight();
     font-size: clamp(2px, 0.6vw, 125px);
 
@@ -193,8 +191,6 @@ th {
     vertical-align: top;
 }
 
-
-
 ::selection {
     color: white;
     background-color: var(--primary-color);
@@ -213,6 +209,9 @@ select:-webkit-autofill:focus {
     background-color: transparent;
 }
 
+::-moz-placeholder {
+    opacity: 1;
+}
 
 .lineParent {
     overflow: hidden;
