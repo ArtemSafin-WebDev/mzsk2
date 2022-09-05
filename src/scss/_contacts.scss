@@ -375,6 +375,7 @@
 }
 
 .contacts__phones-card-phone {
+    white-space: nowrap;
     @include breakpoint(mobile) {
         font-size: 1.4rem;
         color: var(--primary-color);
@@ -432,7 +433,7 @@
     @include breakpointMF(small-tablet) {
         grid-column: 1 / 6;
         display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns: 1fr 1fr 1.3fr;
         grid-gap: 2rem;
         grid-row-gap: 3.2rem;
     }
