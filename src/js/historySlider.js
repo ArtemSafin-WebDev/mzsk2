@@ -12,10 +12,7 @@ export default function historySlider() {
         new Swiper(navContainer, {
             slidesPerView: 'auto',
             speed: 500,
-            navigation: {
-                nextEl: element.querySelector('.about-history__nav-arrow--next'),
-                prevEl: element.querySelector('.about-history__nav-arrow--prev')
-            }
+            
         });
 
         const mainContainer = element.querySelector('.about-history__main-slider .swiper');
@@ -25,6 +22,10 @@ export default function historySlider() {
             speed: 800,
             init: false,
             slideToClickedSlide: true,
+            navigation: {
+                nextEl: element.querySelector('.about-history__nav-arrow--next'),
+                prevEl: element.querySelector('.about-history__nav-arrow--prev')
+            },
             on: {
                 init: swiper => {
                     years.forEach(year => year.classList.remove('active'));

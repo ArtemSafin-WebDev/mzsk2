@@ -244,6 +244,7 @@
     font-size: 2.8rem;
     line-height: 130%;
     font-family: var(--inter);
+    white-space: nowrap;
 
     @include breakpoint(mobile) {
         font-size: 2rem;
