@@ -29,6 +29,7 @@ import productCards from './productCards';
 import servicesSlider from './services';
 import maps from './maps';
 import bricks from './bricks';
+import fileUpload from './fileUpload';
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -62,6 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
     servicesSlider();
     maps();
     bricks();
+    fileUpload();
 
 
     const pageContent = document.querySelector('.page-content');
