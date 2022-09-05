@@ -27,9 +27,22 @@
     flex-direction: column;
 }
 
-.page-inner-content {
-    transition: transform 0.5s, left 0.5s;
+.menu + .pin-spacer {
+    pointer-events: none;
+}
 
+section .container {
+    position: relative;
+    transition: transform 0.5s, left 0.5s;
+    .mobile-menu-open & {
+        transform: translateX(var(--menu-width));
+    }
+}
+
+
+.page-footer .container {
+    position: relative;
+    transition: transform 0.5s, left 0.5s;
     .mobile-menu-open & {
         transform: translateX(var(--menu-width));
     }

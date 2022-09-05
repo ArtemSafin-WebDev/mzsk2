@@ -20,7 +20,7 @@ export default function shrinkHeadersOnScroll() {
                         end: () => content.offsetHeight,
                         scrub: true,
                         pin: element,
-                        pinType: 'transform'
+                        // pinType: 'transform'
                     }
                 });
 
