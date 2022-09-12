@@ -30,6 +30,7 @@ import servicesSlider from './services';
 import maps from './maps';
 import bricks from './bricks';
 import fileUpload from './fileUpload';
+import fancybox from './fancybox';
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -64,6 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
     maps();
     bricks();
     fileUpload();
+    fancybox();
 
 
     const pageContent = document.querySelector('.page-content');
