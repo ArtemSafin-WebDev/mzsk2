@@ -6,12 +6,15 @@
 <section class="standard-header standard-header--large js-shrink-on-scroll">
     <div class="container">
         <div class="standard-header__clipper">
-            <div class="standard-header__content standard-header__content--mobile-height">
+            <div class="standard-header__content standard-header__content--about">
                 <div class="standard-header__bg" style="--overlay-opacity: 0;">
-                    <img src="img/about.jpg" alt="" class="standard-header__bg-image">
+                    <picture>
+                        <source srcset="img/about-mobile.jpg" media="(max-width: 640px)">
+                        <img src="img/about.jpg" alt="" class="standard-header__bg-image">
+                    </picture>
                 </div>
                 <div class="standard-header__logo-wrapper">
-                    <a href="#" class="standard-header__logo standard-header__logo--hide-on-mobile">
+                    <a href="#" class="standard-header__logo">
                         <img src="img/logo.svg" alt="" class="standard-header__logo-image">
                         <div class="standard-header__logo-text">
                             МАРИЙСКИЙ ЗАВОД<br>
