@@ -31,8 +31,15 @@ import maps from './maps';
 import bricks from './bricks';
 import fileUpload from './fileUpload';
 import fancybox from './fancybox';
+import aboutVideo from "./aboutVideo";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
+
+Object.defineProperty(HTMLMediaElement.prototype, 'playing', {
+    get: function() {
+        return !!(this.currentTime > 0 && !this.paused && !this.ended && this.readyState > 2);
+    }
+});
 
 document.addEventListener('DOMContentLoaded', function() {
     if (history.scrollRestoration) {
@@ -66,6 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
     bricks();
     fileUpload();
     fancybox();
+    aboutVideo();
 
 
     const pageContent = document.querySelector('.page-content');

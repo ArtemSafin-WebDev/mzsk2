@@ -142,6 +142,23 @@
     object-fit: cover;
 }
 
+.about-intro__video-player {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s, visibility 0s linear .3s;
+
+    .playing & {
+        opacity: 1;
+        visibility: inherit;
+        transition: opacity .3s, visibility .3s;
+    }
+}
 .about-intro__video-play {
     width: 8.5rem;
     height: 8.5rem;
@@ -155,6 +172,12 @@
     left: 2rem;
     bottom: 2rem;
     z-index: 10;
+    transition: opacity .3s, visibility .3s;
+    .playing & {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .3s, visibility 0s linear .3s;
+    }
 
     @include breakpoint(mobile) {
         width: 6.8rem;
