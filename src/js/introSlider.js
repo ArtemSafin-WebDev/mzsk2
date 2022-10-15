@@ -12,12 +12,12 @@ export default function introSlider() {
         if (IS_MOBILE) return;
 
         new Swiper(container, {
-            slidesPerView: 2,
+            slidesPerView: 4,
             speed: 500,
             navigation: {
                 nextEl: element.querySelector('.intro__slider-arrow--next'),
                 prevEl: element.querySelector('.intro__slider-arrow--prev')
             }
         });
-    })
+    });
 }
