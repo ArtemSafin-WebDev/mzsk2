@@ -41,14 +41,14 @@
 
     @include breakpoint(mobile) {
         margin-bottom: 8rem;
-        padding-top: 8.5rem;
+        padding-top: 6.5rem;
     }
 }
 
 .intro__logo {
     display: flex;
     align-items: flex-start;
-    gap: 2.5rem;
+    gap: 2rem;
     margin-bottom: 5rem;
     opacity: 0;
     visibility: hidden;
@@ -75,8 +75,10 @@
     gap: 4.8rem;
 
     @include breakpoint(mobile) {
-        margin-bottom: 2.8rem;
-        gap: 2.5rem;
+        margin-bottom: 3rem;
+        gap: 2rem;
+        flex-direction: column;
+        align-items: flex-start;
     }
     .intro__logo {
         margin-bottom: 0;
@@ -107,24 +109,9 @@
 }
 
 .intro__rusagro-text {
-    @include breakpoint(mobile) {
-        display: none;
-    }
-}
-
-.intro__logo-image {
-    width: 7.6rem;
-    height: auto;
-
-    @include breakpoint(mobile) {
-        width: 5.3rem;
-    }
-}
-
-.intro__logo-text {
     font-style: normal;
     font-weight: 400;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     line-height: 110%;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -132,17 +119,41 @@
     @include breakpoint(mobile) {
         font-style: normal;
         font-weight: 400;
-        font-size: 1rem;
+        font-size: 1.2rem;
         line-height: 110%;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
+    }
+}
+
+.intro__logo-image {
+    width: 7.4rem;
+    height: auto;
+
+    @include breakpoint(mobile) {
+        width: auto;
+        height: 3.6rem;
+    }
+}
+
+.intro__logo-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 110%;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.2rem;
+        line-height: 110%;
     }
 }
 
 .intro__rusagro-logo {
     display: flex;
     align-items: center;
-    gap: 1.6rem;
+    gap: 2rem;
 
     opacity: 0;
     visibility: hidden;
@@ -158,22 +169,14 @@
 }
 
 .intro__rusagro-logo-image {
-    width: 9rem;
-    height: auto;
+    height: 5.6rem;
+    width: auto;
     display: block;
+    position: relative;
 
     @include breakpoint(mobile) {
-        width: 5rem;
+        height: 3.6rem;
     }
-}
-
-.intro__rusagro-text {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 110%;
-    letter-spacing: 0.13em;
-    text-transform: uppercase;
 }
 
 .intro__text {
