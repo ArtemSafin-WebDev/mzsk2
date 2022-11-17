@@ -46,49 +46,63 @@
             <h2 class="calculator__small-heading">
                 Расчет количества кирпичей
             </h2>
-            <div class="calculator__inner-content">
+            <div class="calculator__inner-content js-tabs">
                 <h3 class="calculator__large-heading">
                     Введите параметры дома и получите расчет необходимого количества кирпичей
                 </h3>
-                <form action="/" method="POST" class="calculator__form">
-                    <div class="calculator__form-fields">
-                        <div class="calculator__form-field">
-                            <div class="calculator__form-field-label">
-                                Высота строения, см
-                            </div>
-                            <input type="tel" class="calculator__form-field-input js-numeric-input-decimals"
-                                value="900">
-                        </div>
-                        <div class="calculator__form-field">
-                            <div class="calculator__form-field-label">
-                                Длина строения, см
-                            </div>
-                            <input type="tel" class="calculator__form-field-input js-numeric-input-decimals"
-                                value="1 600">
-                        </div>
-                        <div class="calculator__form-field">
-                            <div class="calculator__form-field-label">
-                                Ширина строения, см
-                            </div>
-                            <input type="tel" class="calculator__form-field-input js-numeric-input-decimals"
-                                value="1 800">
-                        </div>
-                        <div class="calculator__form-field">
-                            <div class="calculator__form-field-label">
-                                Площадь дверных и оконных проектов, см
-                            </div>
-                            <input type="tel" class="calculator__form-field-input js-numeric-input-decimals"
-                                value="1 000">
-                        </div>
-                        <div class="calculator__form-field calculator__form-field--fullwidth">
-                            <div class="calculator__form-field-label">
-                                Выберите тип укладки
-                            </div>
-                            <div class="calculator__form-checkboxes">
-                                <label class="calculator__checkbox">
-                                    <input type="radio" name="type" class="calculator__checkbox-input" value="1"
-                                        checked="">
-                                    <span class="calculator__checkbox-content">
+                <ul class="calculator__tabs">
+                    <li class="calculator__tab">
+                        <button class="calculator__tab-button js-tabs-btn">
+                            Кирпич
+                        </button>
+                    </li>
+                    <li class="calculator__tab">
+                        <button class="calculator__tab-button js-tabs-btn">
+                            Блоки
+                        </button>
+                    </li>
+                </ul>
+                <ul class="calculator__bodies">
+                    <li class="calculator__body js-tabs-item">
+                        <form action="/" method="POST" class="calculator__form">
+                            <div class="calculator__form-fields">
+                                <div class="calculator__form-field">
+                                    <div class="calculator__form-field-label">
+                                        Высота строения, см
+                                    </div>
+                                    <input type="tel" class="calculator__form-field-input js-numeric-input-decimals"
+                                           value="900">
+                                </div>
+                                <div class="calculator__form-field">
+                                    <div class="calculator__form-field-label">
+                                        Длина строения, см
+                                    </div>
+                                    <input type="tel" class="calculator__form-field-input js-numeric-input-decimals"
+                                           value="1 600">
+                                </div>
+                                <div class="calculator__form-field">
+                                    <div class="calculator__form-field-label">
+                                        Ширина строения, см
+                                    </div>
+                                    <input type="tel" class="calculator__form-field-input js-numeric-input-decimals"
+                                           value="1 800">
+                                </div>
+                                <div class="calculator__form-field">
+                                    <div class="calculator__form-field-label">
+                                        Площадь дверных и оконных проектов, см
+                                    </div>
+                                    <input type="tel" class="calculator__form-field-input js-numeric-input-decimals"
+                                           value="1 000">
+                                </div>
+                                <div class="calculator__form-field calculator__form-field--fullwidth">
+                                    <div class="calculator__form-field-label">
+                                        Выберите тип укладки
+                                    </div>
+                                    <div class="calculator__form-checkboxes">
+                                        <label class="calculator__checkbox">
+                                            <input type="radio" name="type" class="calculator__checkbox-input" value="1"
+                                                   checked="">
+                                            <span class="calculator__checkbox-content">
                                         <svg width="14" height="14" aria-hidden="true" class="icon-calculator-1">
                                             <use xlink:href="#calculator-1"></use>
                                         </svg>
@@ -96,10 +110,10 @@
                                             В полкирпича
                                         </span>
                                     </span>
-                                </label>
-                                <label class="calculator__checkbox">
-                                    <input type="radio" name="type" class="calculator__checkbox-input" value="2">
-                                    <span class="calculator__checkbox-content">
+                                        </label>
+                                        <label class="calculator__checkbox">
+                                            <input type="radio" name="type" class="calculator__checkbox-input" value="2">
+                                            <span class="calculator__checkbox-content">
                                         <svg width="14" height="14" aria-hidden="true" class="icon-calculator-1">
                                             <use xlink:href="#calculator-2"></use>
                                         </svg>
@@ -107,10 +121,10 @@
                                             В один кирпич
                                         </span>
                                     </span>
-                                </label>
-                                <label class="calculator__checkbox">
-                                    <input type="radio" name="type" class="calculator__checkbox-input" value="3">
-                                    <span class="calculator__checkbox-content">
+                                        </label>
+                                        <label class="calculator__checkbox">
+                                            <input type="radio" name="type" class="calculator__checkbox-input" value="3">
+                                            <span class="calculator__checkbox-content">
                                         <svg width="14" height="14" aria-hidden="true" class="icon-calculator-1">
                                             <use xlink:href="#calculator-3"></use>
                                         </svg>
@@ -118,10 +132,10 @@
                                             В полтора кирпича
                                         </span>
                                     </span>
-                                </label>
-                                <label class="calculator__checkbox">
-                                    <input type="radio" name="type" class="calculator__checkbox-input" value="4">
-                                    <span class="calculator__checkbox-content">
+                                        </label>
+                                        <label class="calculator__checkbox">
+                                            <input type="radio" name="type" class="calculator__checkbox-input" value="4">
+                                            <span class="calculator__checkbox-content">
                                         <svg width="14" height="14" aria-hidden="true" class="icon-calculator-1">
                                             <use xlink:href="#calculator-4"></use>
                                         </svg>
@@ -129,10 +143,10 @@
                                             В два кирпича
                                         </span>
                                     </span>
-                                </label>
-                                <label class="calculator__checkbox">
-                                    <input type="radio" name="type" class="calculator__checkbox-input" value="5">
-                                    <span class="calculator__checkbox-content">
+                                        </label>
+                                        <label class="calculator__checkbox">
+                                            <input type="radio" name="type" class="calculator__checkbox-input" value="5">
+                                            <span class="calculator__checkbox-content">
                                         <svg width="14" height="14" aria-hidden="true" class="icon-calculator-1">
                                             <use xlink:href="#calculator-5"></use>
                                         </svg>
@@ -140,62 +154,213 @@
                                             В два с половиной кирпича
                                         </span>
                                     </span>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="calculator__form-field calculator__form-field--extra-padding">
-                            <div class="calculator__form-field-label">
-                                Ширина строения, см
-                            </div>
-                            <div class="calculator__form-select">
-                                <select name="width" class="js-custom-select">
-                                    <option value="1">
-                                        Одинарный
-                                    </option>
-                                    <option value="2">
-                                        Двойной
-                                    </option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="calculator__form-field calculator__form-field--extra-padding">
-                            <div class="calculator__form-field-label">
-                                Учитывать раствор шва
-                            </div>
-                            <div class="calculator__form-field-radios">
-                                <label class="calculator__form-field-radio">
-                                    <input type="radio" name="seam" class="calculator__form-field-radio-input" value="1"
-                                        checked="">
-                                    <span class="calculator__form-field-radio-content">
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="calculator__form-field calculator__form-field--extra-padding">
+                                    <div class="calculator__form-field-label">
+                                        Ширина строения, см
+                                    </div>
+                                    <div class="calculator__form-select">
+                                        <select name="width" class="js-custom-select">
+                                            <option value="1">
+                                                Одинарный
+                                            </option>
+                                            <option value="2">
+                                                Двойной
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="calculator__form-field calculator__form-field--extra-padding">
+                                    <div class="calculator__form-field-label">
+                                        Учитывать раствор шва
+                                    </div>
+                                    <div class="calculator__form-field-radios">
+                                        <label class="calculator__form-field-radio">
+                                            <input type="radio" name="seam" class="calculator__form-field-radio-input" value="1"
+                                                   checked="">
+                                            <span class="calculator__form-field-radio-content">
                                         Да
                                     </span>
-                                </label>
-                                <label class="calculator__form-field-radio">
-                                    <input type="radio" name="seam" class="calculator__form-field-radio-input"
-                                        value="2">
-                                    <span class="calculator__form-field-radio-content">
+                                        </label>
+                                        <label class="calculator__form-field-radio">
+                                            <input type="radio" name="seam" class="calculator__form-field-radio-input"
+                                                   value="2">
+                                            <span class="calculator__form-field-radio-content">
                                         Нет
                                     </span>
-                                </label>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="calculator__result-wrapper">
+
+
+                            <div class="calculator__result">
+                                <div class="calculator__result-amount">
+                                    25 907 310
+                                </div>
+                                <div class="calculator__result-text">
+                                    Необходимое количество кирпичей, шт.
+                                </div>
+                                <a href="#order-product" class="calculator__result-link">
+                                    Заказать
+                                </a>
                             </div>
                         </div>
-                    </div>
-                </form>
-                <div class="calculator__result-wrapper">
+                    </li>
+
+                    <li class="calculator__body js-tabs-item">
+                        <form action="/" method="POST" class="calculator__form">
+                            <div class="calculator__form-fields">
+                                <div class="calculator__form-field">
+                                    <div class="calculator__form-field-label">
+                                        Высота строения, см
+                                    </div>
+                                    <input type="tel" class="calculator__form-field-input js-numeric-input-decimals"
+                                           value="900">
+                                </div>
+                                <div class="calculator__form-field">
+                                    <div class="calculator__form-field-label">
+                                        Длина строения, см
+                                    </div>
+                                    <input type="tel" class="calculator__form-field-input js-numeric-input-decimals"
+                                           value="1 600">
+                                </div>
+                                <div class="calculator__form-field">
+                                    <div class="calculator__form-field-label">
+                                        Ширина строения, см
+                                    </div>
+                                    <input type="tel" class="calculator__form-field-input js-numeric-input-decimals"
+                                           value="1 800">
+                                </div>
+                                <div class="calculator__form-field">
+                                    <div class="calculator__form-field-label">
+                                        Площадь дверных и оконных проектов, см
+                                    </div>
+                                    <input type="tel" class="calculator__form-field-input js-numeric-input-decimals"
+                                           value="1 000">
+                                </div>
+                                <div class="calculator__form-field calculator__form-field--fullwidth">
+                                    <div class="calculator__form-field-label">
+                                        Выберите тип укладки
+                                    </div>
+                                    <div class="calculator__form-checkboxes">
+                                        <label class="calculator__checkbox">
+                                            <input type="radio" name="type" class="calculator__checkbox-input" value="1"
+                                                   checked="">
+                                            <span class="calculator__checkbox-content">
+                                        <svg width="14" height="14" aria-hidden="true" class="icon-calculator-1">
+                                            <use xlink:href="#calculator-1"></use>
+                                        </svg>
+                                        <span class="calculator__checkbox-text">
+                                            В полкирпича
+                                        </span>
+                                    </span>
+                                        </label>
+                                        <label class="calculator__checkbox">
+                                            <input type="radio" name="type" class="calculator__checkbox-input" value="2">
+                                            <span class="calculator__checkbox-content">
+                                        <svg width="14" height="14" aria-hidden="true" class="icon-calculator-1">
+                                            <use xlink:href="#calculator-2"></use>
+                                        </svg>
+                                        <span class="calculator__checkbox-text">
+                                            В один кирпич
+                                        </span>
+                                    </span>
+                                        </label>
+                                        <label class="calculator__checkbox">
+                                            <input type="radio" name="type" class="calculator__checkbox-input" value="3">
+                                            <span class="calculator__checkbox-content">
+                                        <svg width="14" height="14" aria-hidden="true" class="icon-calculator-1">
+                                            <use xlink:href="#calculator-3"></use>
+                                        </svg>
+                                        <span class="calculator__checkbox-text">
+                                            В полтора кирпича
+                                        </span>
+                                    </span>
+                                        </label>
+                                        <label class="calculator__checkbox">
+                                            <input type="radio" name="type" class="calculator__checkbox-input" value="4">
+                                            <span class="calculator__checkbox-content">
+                                        <svg width="14" height="14" aria-hidden="true" class="icon-calculator-1">
+                                            <use xlink:href="#calculator-4"></use>
+                                        </svg>
+                                        <span class="calculator__checkbox-text">
+                                            В два кирпича
+                                        </span>
+                                    </span>
+                                        </label>
+                                        <label class="calculator__checkbox">
+                                            <input type="radio" name="type" class="calculator__checkbox-input" value="5">
+                                            <span class="calculator__checkbox-content">
+                                        <svg width="14" height="14" aria-hidden="true" class="icon-calculator-1">
+                                            <use xlink:href="#calculator-5"></use>
+                                        </svg>
+                                        <span class="calculator__checkbox-text">
+                                            В два с половиной кирпича
+                                        </span>
+                                    </span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="calculator__form-field calculator__form-field--extra-padding">
+                                    <div class="calculator__form-field-label">
+                                        Ширина строения, см
+                                    </div>
+                                    <div class="calculator__form-select">
+                                        <select name="width" class="js-custom-select">
+                                            <option value="1">
+                                                Одинарный
+                                            </option>
+                                            <option value="2">
+                                                Двойной
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="calculator__form-field calculator__form-field--extra-padding">
+                                    <div class="calculator__form-field-label">
+                                        Учитывать раствор шва
+                                    </div>
+                                    <div class="calculator__form-field-radios">
+                                        <label class="calculator__form-field-radio">
+                                            <input type="radio" name="seam" class="calculator__form-field-radio-input" value="1"
+                                                   checked="">
+                                            <span class="calculator__form-field-radio-content">
+                                        Да
+                                    </span>
+                                        </label>
+                                        <label class="calculator__form-field-radio">
+                                            <input type="radio" name="seam" class="calculator__form-field-radio-input"
+                                                   value="2">
+                                            <span class="calculator__form-field-radio-content">
+                                        Нет
+                                    </span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="calculator__result-wrapper">
 
 
-                    <div class="calculator__result">
-                        <div class="calculator__result-amount">
-                            25 907 310
+                            <div class="calculator__result">
+                                <div class="calculator__result-amount">
+                                    25 907 310
+                                </div>
+                                <div class="calculator__result-text">
+                                    Необходимое количество кирпичей, шт.
+                                </div>
+                                <a href="#order-product" class="calculator__result-link">
+                                    Заказать
+                                </a>
+                            </div>
                         </div>
-                        <div class="calculator__result-text">
-                            Необходимое количество кирпичей, шт.
-                        </div>
-                        <a href="#order-product" class="calculator__result-link">
-                            Заказать
-                        </a>
-                    </div>
-                </div>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
